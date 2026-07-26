@@ -1,0 +1,25 @@
+/*
+ * Test de connexion entre GitHub Pages et be-BOP.
+ * À remplacer par le thème complet après validation.
+ */
+
+:root {
+  --lpldf-test-gold: #d8a83e;
+}
+
+body::before {
+  content: "CSS LPLDF connecté";
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 999999;
+  padding: 10px 16px;
+  border: 2px solid var(--lpldf-test-gold);
+  border-radius: 999px;
+  background: #183247;
+  color: #fff8e8;
+  box-shadow: 0 8px 25px rgba(24, 50, 71, 0.3);
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
