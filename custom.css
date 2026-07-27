@@ -1419,104 +1419,114 @@ footer.footer a:hover{color:#f2c55e!important}
   .lpldf-pack-saving{grid-template-columns:1fr;padding:24px}
 }
 
-/* COLLECTION — catalogue natif be-BOP (image, sats, euros et panier réels) */
+/* COLLECTION — composants marchands natifs dans la scénographie LPLDF.
+   be-BOP sépare le HTML CMS et chaque shortcode dans des conteneurs frères :
+   le sélecteur racine ci-dessous cible cette structure réellement générée. */
 .lpldf-native-collection-marker{display:none!important}
 
-*:has(> .lpldf-native-collection-marker){
+*:has(> .my-5 > .lpldf-native-collection-marker){
   display:grid!important;
   grid-template-columns:repeat(20,minmax(0,1fr))!important;
-  gap:24px 18px!important;
+  column-gap:18px!important;
+  row-gap:0!important;
   align-items:stretch!important;
+  isolation:isolate;
   width:100%!important;
-  max-width:none!important;
-  margin:0!important;
-  padding:0 0 88px!important;
+  max-width:1180px!important;
+  margin:0 auto!important;
+  padding:0 18px 88px!important;
   overflow:visible!important;
-  background:#fff!important;
+  background:transparent!important;
 }
 
-*:has(> .lpldf-native-collection-marker) > .lpldf-native-collection-marker,
-*:has(> .lpldf-native-collection-marker) > section,
-*:has(> .lpldf-native-collection-marker) > nav{
+/* Les fragments HTML de be-BOP deviennent transparents pour que leurs
+   sections prennent réellement place dans la grille commune. */
+*:has(> .my-5 > .lpldf-native-collection-marker) > .my-5{
+  display:contents!important;
+}
+*:has(> .my-5 > .lpldf-native-collection-marker) > .my-5 > section,
+*:has(> .my-5 > .lpldf-native-collection-marker) > .my-5 > nav{
   grid-column:1/-1!important;
 }
 
-/* be-BOP génère deux variantes du widget. Sur la Collection, la variante
-   img-4 est conservée à toutes les tailles car elle possède le vrai panier. */
-*:has(> .lpldf-native-collection-marker) > .lg\:hidden.contents{
+/* be-BOP génère deux versions de chaque produit. La version img-4 possède
+   l’image, les sats, les euros et le véritable bouton panier. */
+*:has(> .my-5 > .lpldf-native-collection-marker) > .lg\:hidden.contents{
   display:none!important;
 }
-*:has(> .lpldf-native-collection-marker) > .hidden.lg\:contents{
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents{
   display:contents!important;
 }
 
-*:has(> .lpldf-native-collection-marker) > .tagWidget.tagWidget-main{
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget.tagWidget-main{
   grid-column:span 5;
+  position:relative!important;
+  z-index:2;
   display:flex!important;
   flex-direction:column!important;
   align-self:stretch!important;
   width:100%!important;
   min-width:0!important;
   max-width:none!important;
-  height:100%!important;
-  margin:0!important;
+  height:calc(100% - 54px)!important;
+  margin:0 0 54px!important;
   padding:0!important;
   overflow:hidden!important;
-  border:1px solid var(--lpldf-line)!important;
+  border:1px solid rgba(24,50,71,.12)!important;
   border-radius:22px!important;
   background:#fff!important;
-  box-shadow:0 16px 38px rgba(24,50,71,.10)!important;
+  box-shadow:0 17px 42px rgba(24,50,71,.11)!important;
   transition:transform .22s ease,box-shadow .22s ease!important;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget.tagWidget-main:hover{
-  transform:translateY(-4px)!important;
-  box-shadow:0 22px 48px rgba(24,50,71,.15)!important;
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget.tagWidget-main:hover{
+  transform:translateY(-5px)!important;
+  box-shadow:0 24px 52px rgba(24,50,71,.17)!important;
 }
 
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href*="/product/pack-"]){
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href*="/product/pack-"]){
   grid-column:span 10;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t05-la-boussole-invisible"]),
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t06-le-ruban-de-solidarite"]),
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t07-une-histoire-de-jardin"]),
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t08-le-pont-du-consentement"]),
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t09-quand-le-gardien-oublie-sa-mission"]){
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t05-la-boussole-invisible"]),
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t06-le-ruban-de-solidarite"]),
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t07-une-histoire-de-jardin"]),
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t08-le-pont-du-consentement"]),
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t09-quand-le-gardien-oublie-sa-mission"]){
   grid-column:span 4;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t00-le-grand-carnet-des-idees"]),
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t10-la-foire-aux-mille-prix"]){
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t00-le-grand-carnet-des-idees"]),
+*:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t10-la-foire-aux-mille-prix"]){
   grid-column:8/span 6;
 }
 
-*:has(> .lpldf-native-collection-marker) > .tagWidget > .flex.flex-col:first-child{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget > .flex.flex-col:first-child{
   flex:0 0 auto!important;
   min-width:0!important;
   padding:16px 16px 0!important;
   background:linear-gradient(150deg,#f8f3e7,#eaf1ed)!important;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget > .flex.flex-col:first-child > a{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget > .flex.flex-col:first-child > a{
   display:block!important;
   margin:0!important;
   overflow:hidden!important;
   border-radius:15px!important;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget > .flex.flex-col:first-child img{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget > .flex.flex-col:first-child img{
   display:block!important;
   width:100%!important;
-  height:clamp(220px,22vw,315px)!important;
+  height:clamp(210px,19vw,285px)!important;
   max-height:none!important;
   object-fit:contain!important;
   background:transparent!important;
   transition:transform .3s ease!important;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget:hover > .flex.flex-col:first-child img{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget:hover > .flex.flex-col:first-child img{
   transform:scale(1.025)!important;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href*="/product/pack-"]) > .flex.flex-col:first-child img{
-  height:clamp(250px,30vw,390px)!important;
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget:has(a[href*="/product/pack-"]) > .flex.flex-col:first-child img{
+  height:clamp(245px,28vw,380px)!important;
 }
 
-*:has(> .lpldf-native-collection-marker) > .tagWidget > .flex.flex-col.gap-2{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget > .flex.flex-col.gap-2{
   display:flex!important;
   flex:1!important;
   flex-direction:column!important;
@@ -1524,42 +1534,41 @@ footer.footer a:hover{color:#f2c55e!important}
   gap:12px!important;
   padding:20px!important;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget a:has(> h2){
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget > .flex.flex-col.gap-2 > .flex{
+  min-width:0!important;
+  flex-wrap:wrap!important;
+}
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget a:has(> h2){
   color:var(--lpldf-ink)!important;
   text-decoration:none!important;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget a:has(> h2) h2{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget a:has(> h2) h2{
   margin:0!important;
   color:var(--lpldf-ink)!important;
-  font:700 clamp(1.08rem,1.8vw,1.38rem)/1.18 Georgia,"Times New Roman",serif!important;
+  font:700 clamp(1.05rem,1.65vw,1.32rem)/1.2 Georgia,"Times New Roman",serif!important;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget a:has(> h2)::after{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget a:has(> h2)::after{
   content:"Découvrir le tome  →";
   display:flex;
   justify-content:center;
   align-items:center;
-  min-height:42px;
-  margin-top:14px;
-  padding:9px 13px;
+  min-height:40px;
+  margin-top:13px;
+  padding:8px 12px;
   border:1px solid var(--lpldf-ink);
   border-radius:999px;
   color:var(--lpldf-ink);
-  font:800 .8rem/1.15 "Montserrat","Trebuchet MS",sans-serif;
+  font:800 .77rem/1.15 "Montserrat","Trebuchet MS",sans-serif;
   text-align:center;
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href*="/product/pack-"]) a:has(> h2)::after{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget:has(a[href*="/product/pack-"]) a:has(> h2)::after{
   content:"Découvrir le pack  →";
 }
-*:has(> .lpldf-native-collection-marker) > .tagWidget a:has(> h2):hover::after{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget a:has(> h2):hover::after{
   background:var(--lpldf-ink);
   color:#fff;
 }
-
-*:has(> .lpldf-native-collection-marker) > .tagWidget > .flex.flex-col.gap-2 > .flex{
-  min-width:0!important;
-  flex-wrap:wrap!important;
-}
-*:has(> .lpldf-native-collection-marker) > .tagWidget .cartPreview-mainCTA{
+*:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget .cartPreview-mainCTA{
   width:100%!important;
   min-height:44px!important;
   margin-top:auto!important;
@@ -1570,12 +1579,18 @@ footer.footer a:hover{color:#f2c55e!important}
   white-space:normal!important;
 }
 
-.lpldf-native-collection-hero{margin-bottom:0!important}
+.lpldf-native-collection-hero{
+  width:100vw!important;
+  max-width:none!important;
+  margin:0 calc(50% - 50vw)!important;
+}
 .lpldf-native-collection-nav{
   position:sticky;
   z-index:20;
   top:0;
-  margin:0!important;
+  width:100vw!important;
+  max-width:none!important;
+  margin:0 calc(50% - 50vw)!important;
   border-block:1px solid var(--lpldf-line);
   background:rgba(255,255,255,.94);
   backdrop-filter:blur(12px);
@@ -1599,18 +1614,31 @@ footer.footer a:hover{color:#f2c55e!important}
 .lpldf-native-collection-nav a:hover{background:var(--lpldf-cream)}
 
 .lpldf-native-catalog-heading{
+  --lpldf-band:#fff;
+  --lpldf-band-depth:590px;
+  position:relative;
+  z-index:0;
   scroll-margin-top:84px;
-  margin:48px 0 4px!important;
-  padding:clamp(54px,7vw,82px) 22px 30px!important;
-  border-top:1px solid var(--lpldf-line);
-  background:#fff;
+  margin:0!important;
+  padding:clamp(64px,8vw,94px) 22px 34px!important;
+  border-top:1px solid rgba(24,50,71,.08);
+  background:transparent!important;
+}
+.lpldf-native-catalog-heading::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0 calc(50% - 50vw) calc(-1 * var(--lpldf-band-depth));
+  background:var(--lpldf-band);
 }
 .lpldf-native-catalog-heading--sage{
-  background:linear-gradient(135deg,#eef4ee,#e7efe8);
+  --lpldf-band:linear-gradient(135deg,#eef4ee,#e4ede6);
 }
 .lpldf-native-catalog-heading--paper{
-  background:linear-gradient(135deg,#fff9eb,#f8f0dd);
+  --lpldf-band:linear-gradient(135deg,#fff9eb,#f7eed9);
 }
+#collection-packs{--lpldf-band-depth:720px}
+#collection-t00,#collection-saison-3{--lpldf-band-depth:620px}
 .lpldf-native-catalog-heading .lpldf-section-heading{
   margin:0 auto;
   padding:0;
@@ -1621,50 +1649,56 @@ footer.footer a:hover{color:#f2c55e!important}
   margin-inline:auto;
 }
 .lpldf-native-collection-final{
-  margin:58px 0 -88px!important;
+  width:100vw!important;
+  max-width:none!important;
+  margin:20px calc(50% - 50vw) -88px!important;
 }
 
 @media(max-width:900px){
-  *:has(> .lpldf-native-collection-marker){
+  *:has(> .my-5 > .lpldf-native-collection-marker){
     grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:18px!important;
+    column-gap:18px!important;
+    padding-inline:18px!important;
   }
-  *:has(> .lpldf-native-collection-marker) > .lpldf-native-collection-marker,
-  *:has(> .lpldf-native-collection-marker) > section,
-  *:has(> .lpldf-native-collection-marker) > nav{
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .my-5 > section,
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .my-5 > nav{
     grid-column:1/-1!important;
   }
-  *:has(> .lpldf-native-collection-marker) > .tagWidget.tagWidget-main,
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href*="/product/pack-"]),
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t00-le-grand-carnet-des-idees"]),
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t10-la-foire-aux-mille-prix"]),
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t05-la-boussole-invisible"]),
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t06-le-ruban-de-solidarite"]),
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t07-une-histoire-de-jardin"]),
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t08-le-pont-du-consentement"]),
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href="/product/t09-quand-le-gardien-oublie-sa-mission"]){
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget.tagWidget-main,
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href*="/product/pack-"]),
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t00-le-grand-carnet-des-idees"]),
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t10-la-foire-aux-mille-prix"]),
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t05-la-boussole-invisible"]),
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t06-le-ruban-de-solidarite"]),
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t07-une-histoire-de-jardin"]),
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t08-le-pont-du-consentement"]),
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget:has(a[href="/product/t09-quand-le-gardien-oublie-sa-mission"]){
     grid-column:span 1!important;
   }
+  .lpldf-native-catalog-heading{--lpldf-band-depth:1060px}
+  #collection-packs{--lpldf-band-depth:1230px}
 }
 
 @media(max-width:620px){
-  *:has(> .lpldf-native-collection-marker){
+  *:has(> .my-5 > .lpldf-native-collection-marker){
     grid-template-columns:minmax(0,1fr)!important;
-    gap:16px!important;
+    padding-inline:0!important;
   }
-  *:has(> .lpldf-native-collection-marker) > .tagWidget.tagWidget-main{
+  *:has(> .my-5 > .lpldf-native-collection-marker) > .hidden.lg\:contents > .tagWidget.tagWidget-main{
     grid-column:1!important;
     width:calc(100% - 30px)!important;
     max-width:390px!important;
-    margin-inline:auto!important;
+    height:calc(100% - 34px)!important;
+    margin:0 auto 34px!important;
   }
-  *:has(> .lpldf-native-collection-marker) > .tagWidget > .flex.flex-col:first-child img,
-  *:has(> .lpldf-native-collection-marker) > .tagWidget:has(a[href*="/product/pack-"]) > .flex.flex-col:first-child img{
+  *:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget > .flex.flex-col:first-child img,
+  *:has(> .my-5 > .lpldf-native-collection-marker) .tagWidget:has(a[href*="/product/pack-"]) > .flex.flex-col:first-child img{
     height:min(78vw,330px)!important;
   }
   .lpldf-native-collection-nav .lpldf-shell{justify-content:flex-start}
   .lpldf-native-catalog-heading{
-    margin-top:36px!important;
-    padding:48px 22px 25px!important;
+    --lpldf-band-depth:650px;
+    padding:54px 22px 28px!important;
   }
+  #collection-packs{--lpldf-band-depth:1320px}
 }

@@ -2,6 +2,14 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.6.1
+
+- correction des sélecteurs selon la structure DOM réellement générée par be-BOP ;
+- restauration des grilles de deux, quatre ou cinq produits selon la section ;
+- restauration des bandes pleine largeur crème, blanches et vert sauge ;
+- conservation des composants marchands natifs : image, sats, euros et panier ;
+- maintien d’une carte par ligne sur téléphone et de deux cartes sur tablette.
+
 ## 5.6
 
 - remplacement des cartes éditoriales de la Collection par treize widgets produit natifs be-BOP ;

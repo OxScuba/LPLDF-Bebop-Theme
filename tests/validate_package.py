@@ -100,6 +100,8 @@ def main():
         fail("custom.css: visionneuse des images produit absente", failures)
     if ".lpldf-native-collection-marker" not in css or ".tagWidget.tagWidget-main" not in css:
         fail("custom.css: présentation du catalogue natif absente", failures)
+    if ":has(> .my-5 > .lpldf-native-collection-marker)" not in css:
+        fail("custom.css: sélecteur de la structure réelle be-BOP absent", failures)
 
     gallery_script = ROOT / "product-gallery.js"
     if not gallery_script.exists():
