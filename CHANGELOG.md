@@ -1,5 +1,17 @@
 # Changelog
 
+## V5.3 — Sélecteur compact et visionneuses
+
+- retour à une composition aventuriers en deux colonnes : un seul visuel à
+  gauche, commandes et présentation à droite ;
+- remplacement des quatre anciens visuels par les portraits transparents
+  importés dans be-BOP ;
+- agrandissement au clic des trois images de la galerie Home ;
+- fiches Fred, Lina, Tom et Milo cliquables dans la page Univers ;
+- affichage grand format de l’illustration et de la description canonique ;
+- visionneuses réalisées uniquement en HTML/CSS, sans JavaScript ;
+- création du registre central `REGISTRE_IMAGES_BEBOP.csv`.
+
 ## V5.2 — Navigation, rythme commercial et univers canonique
 
 - correction globale des images `2048` non générées par be-BOP vers `1024` ;

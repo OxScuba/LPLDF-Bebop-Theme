@@ -1,4 +1,4 @@
-# LPLDF be-BOP — Refonte visuelle V5.2
+# LPLDF be-BOP — Refonte visuelle V5.3
 
 Thème et contenus prêts à intégrer pour la boutique **Les Petites Leçons de
 Frédéric**, sur be-BOP
@@ -21,7 +21,7 @@ blocs de `produits/cms-apres-produit/`.
 
 ## Contenu du dépôt
 
-- `custom.css` : design system V5.2 publié avec GitHub Pages ;
+- `custom.css` : design system V5.3 publié avec GitHub Pages ;
 - `cms/` : 14 pages complètes en HTML avancé ;
 - `produits/papier/` : descriptions en texte simple, prix, tags et ISBN ;
 - `produits/cms-apres-produit/` : 11 blocs éditoriaux à placer après le cœur
