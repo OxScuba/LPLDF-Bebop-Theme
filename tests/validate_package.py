@@ -54,6 +54,8 @@ def main():
             fail(f"{path.name}: lien sans href", failures)
         if "REMPLACER_IMG_" in content:
             fail(f"{path.name}: placeholder d’image non remplacé", failures)
+        if "/format/2048" in content:
+            fail(f"{path.name}: format d’image 2048 non disponible dans be-BOP", failures)
         if not content.lstrip().startswith("<style>"):
             fail(f"{path.name}: import CSS absent au début", failures)
         if "custom.css" not in content:
@@ -68,6 +70,8 @@ def main():
         fail("custom.css: badge de test encore présent", failures)
     if ".lpldf-page" not in css or "header.header" not in css:
         fail("custom.css: règles principales V5 absentes", failures)
+    if ".lpldf-adventurers" not in css:
+        fail("custom.css: sélecteur des aventuriers V5.2 absent", failures)
 
     product_cms_files = sorted((ROOT / "produits" / "cms-apres-produit").glob("*.html"))
     if len(product_cms_files) != 11:

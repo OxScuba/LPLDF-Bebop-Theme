@@ -1,5 +1,24 @@
 # Changelog
 
+## V5.2 — Navigation, rythme commercial et univers canonique
+
+- correction globale des images `2048` non générées par be-BOP vers `1024` ;
+- pleine largeur conservée avec **Full screen** désactivé afin de retrouver
+  navigation, panier et pied de page natifs ;
+- Home raccourcie : quatre portes d’entrée à la place des onze produits ;
+- sélecteur CSS sans JavaScript pour Fred, Lina, Tom et Milo ;
+- renommage de la section en « Rencontrez les aventuriers » ;
+- page Univers réécrite depuis le canon `Atelier-LPLDF` ;
+- correction des âges et du statut de Fred, jeune adulte de 21 ans ;
+- ajout d’une première présentation des artisans, organisateurs et voisins ;
+- préparation de quatre futurs portraits PNG transparents.
+
+## V5.1 — Compatibilité du HTML continu
+
+- remplacement des widgets be-BOP fragmentés dans la Home par des cartes HTML ;
+- import CSS uniformisé sur l’URL GitHub Pages canonique ;
+- grille directe des couvertures et avis sans dépendance aux widgets.
+
 ## V5.0 — HTML avancé sans modification serveur
 
 - validation réelle du chargement GitHub Pages dans un CMS avancé ;

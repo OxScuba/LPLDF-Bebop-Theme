@@ -1,4 +1,4 @@
-# Installation V5 pas à pas
+# Installation V5.2 pas à pas
 
 ## 0. Ce qui est déjà validé
 
@@ -9,7 +9,7 @@ fonctionnent donc avec cette instance.
 Ne jamais modifier `src/app.html` : le fichier source est partagé entre deux
 boutiques.
 
-## 1. Publier le CSS V5
+## 1. Publier le CSS V5.2
 
 Remplacer le fichier racine `custom.css` du dépôt par celui de cette version,
 puis attendre la mise à jour de GitHub Pages.
@@ -18,7 +18,8 @@ Contrôler directement :
 
 https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css
 
-Le fichier doit commencer par `DESIGN SYSTEM V5` et ne plus contenir le badge
+Le fichier doit commencer par `DESIGN SYSTEM V5` et contenir
+`V5.2 — sélecteur des quatre aventuriers`. Il ne doit plus contenir le badge
 `CSS LPLDF connecté`.
 
 ## 2. Configurer le thème natif
@@ -38,7 +39,8 @@ Dans **Admin > Merch > Layout** :
 
 1. Sauvegarder le contenu actuel de la page d’accueil.
 2. Ouvrir sa configuration CMS.
-3. Cocher **Full screen**.
+3. Décocher **Full screen** pour conserver le menu, le panier et le pied de
+   page natifs. Le CSS V5.2 maintient malgré tout les sections en pleine largeur.
 4. Cocher **Use advanced HTML edition**.
 5. Coller l’intégralité de `../cms/Home.html` dans **Raw HTML**.
 6. Enregistrer.
@@ -61,7 +63,7 @@ Procéder page par page :
 Pour chaque page :
 
 - sauvegarder l’ancien contenu ;
-- cocher **Full screen** ;
+- décocher **Full screen** ;
 - cocher **Use advanced HTML edition** ;
 - coller le fichier entier, y compris la balise `<style>` ;
 - vérifier les images, widgets, liens et affichage mobile.

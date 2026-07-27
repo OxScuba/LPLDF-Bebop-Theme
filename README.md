@@ -1,4 +1,4 @@
-# LPLDF be-BOP — Refonte visuelle V5
+# LPLDF be-BOP — Refonte visuelle V5.2
 
 Thème et contenus prêts à intégrer pour la boutique **Les Petites Leçons de
 Frédéric**, sur be-BOP
@@ -21,7 +21,7 @@ blocs de `produits/cms-apres-produit/`.
 
 ## Contenu du dépôt
 
-- `custom.css` : design system V5 publié avec GitHub Pages ;
+- `custom.css` : design system V5.2 publié avec GitHub Pages ;
 - `cms/` : 14 pages complètes en HTML avancé ;
 - `produits/papier/` : descriptions en texte simple, prix, tags et ISBN ;
 - `produits/cms-apres-produit/` : 11 blocs éditoriaux à placer après le cœur
@@ -37,10 +37,11 @@ blocs de `produits/cms-apres-produit/`.
 1. Publier `custom.css`.
 2. Configurer le thème natif et la langue française.
 3. Convertir une page CMS de test en HTML avancé.
-4. Installer `cms/Home.html`, puis les autres pages une à une.
-5. Ajouter les blocs de `produits/cms-apres-produit/` dans la zone
+4. Installer `cms/Home.html` dans **Raw HTML**, avec **Full screen** désactivé.
+5. Installer `cms/Univers.html`, puis les autres pages une à une.
+6. Ajouter les blocs de `produits/cms-apres-produit/` dans la zone
    **Add CMS code and widgets after product page core**.
-6. Contrôler ordinateur et mobile après chaque étape.
+7. Contrôler ordinateur et mobile après chaque étape.
 
 La procédure complète se trouve dans
 `docs/INSTALLATION_PAS_A_PAS.md`.
