@@ -888,7 +888,122 @@ footer.footer a:hover{color:#f2c55e!important}
   font:700 1.08rem/1.25 Georgia,"Times New Roman",serif;
 }
 .lpldf-book-card__body small{color:#66747d;font-size:.84rem;line-height:1.4}
-.lpldf-book-card__body b{color:var(--lpldf-rust);font-size:1.08rem}
+.lpldf-book-card__body b{color:var(--lpldf-terracotta);font-size:1.08rem}
+
+/* PAGE COLLECTION — cartes HTML stables, sans shortcode produit be-BOP */
+.lpldf-collection-nav{
+  position:relative;
+  z-index:5;
+  border-bottom:1px solid rgba(24,50,71,.12);
+  background:#fff;
+}
+.lpldf-collection-nav .lpldf-shell{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding-block:15px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.lpldf-collection-nav .lpldf-shell::-webkit-scrollbar{display:none}
+.lpldf-collection-nav a{
+  flex:0 0 auto;
+  padding:9px 16px;
+  border:1px solid var(--lpldf-line);
+  border-radius:999px;
+  background:var(--lpldf-cream);
+  color:var(--lpldf-ink)!important;
+  font-size:.84rem;
+  font-weight:800;
+  text-decoration:none!important;
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+.lpldf-collection-nav a:hover{transform:translateY(-2px);border-color:var(--lpldf-gold);background:#fff}
+.lpldf-collection [id^="collection-"]{scroll-margin-top:26px}
+.lpldf-collection-feature{
+  display:grid;
+  grid-template-columns:minmax(270px,.78fr) minmax(0,1.22fr);
+  align-items:center;
+  gap:clamp(34px,7vw,90px);
+  padding:clamp(28px,5vw,54px);
+  border:1px solid var(--lpldf-line);
+  border-radius:26px;
+  background:linear-gradient(145deg,#fff,var(--lpldf-cream));
+  box-shadow:var(--lpldf-shadow);
+}
+.lpldf-collection-feature--reverse{grid-template-columns:minmax(0,1.22fr) minmax(270px,.78fr)}
+.lpldf-collection-feature--reverse>img{order:2}
+.lpldf-collection-feature>img{
+  display:block;
+  width:100%;
+  max-height:540px;
+  object-fit:contain;
+  filter:drop-shadow(0 22px 24px rgba(24,50,71,.2));
+}
+.lpldf-collection-feature>div>span{
+  color:var(--lpldf-gold-dark);
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.lpldf-collection-feature h3{
+  margin:14px 0 18px;
+  font:700 clamp(1.8rem,3vw,2.7rem)/1.1 Georgia,"Times New Roman",serif;
+}
+.lpldf-collection-feature p{color:var(--lpldf-muted)}
+.lpldf-collection-feature__footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  margin-top:28px;
+  padding-top:22px;
+  border-top:1px solid var(--lpldf-line);
+}
+.lpldf-collection-feature__footer>strong{color:var(--lpldf-terracotta);font-size:1.45rem}
+.lpldf-book-grid--five{grid-template-columns:repeat(5,minmax(0,1fr))}
+.lpldf-season-pack{
+  display:grid;
+  grid-template-columns:minmax(350px,1fr) minmax(330px,.9fr);
+  align-items:center;
+  gap:clamp(26px,5vw,62px);
+  margin-top:50px;
+  padding:clamp(26px,4vw,44px);
+  overflow:hidden;
+  border:1px solid rgba(216,168,62,.55);
+  border-radius:26px;
+  background:linear-gradient(135deg,var(--lpldf-ink),#28556d);
+  color:#fff!important;
+  text-decoration:none!important;
+  box-shadow:0 22px 52px rgba(24,50,71,.18);
+  transition:transform .28s ease,box-shadow .28s ease;
+}
+.lpldf-season-pack:hover{transform:translateY(-6px);box-shadow:0 32px 66px rgba(24,50,71,.25)}
+.lpldf-season-pack__covers{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  min-height:230px;
+}
+.lpldf-season-pack__covers img{
+  width:23%;
+  max-height:245px;
+  margin-left:-5%;
+  border-radius:7px;
+  object-fit:contain;
+  box-shadow:0 12px 24px rgba(0,0,0,.24);
+  transform:rotate(-4deg);
+}
+.lpldf-season-pack__covers img:first-child{margin-left:0}
+.lpldf-season-pack__covers img:nth-child(even){transform:translateY(-8px) rotate(3deg)}
+.lpldf-season-pack__covers img:nth-child(3){position:relative;z-index:2;transform:translateY(-14px)}
+.lpldf-season-pack__content{display:flex;flex-direction:column;align-items:flex-start}
+.lpldf-season-pack__content>small{color:#f2c55e;font-size:.76rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.lpldf-season-pack__content>strong{margin:12px 0 20px;color:#fff;font:700 clamp(1.65rem,3vw,2.45rem)/1.12 Georgia,"Times New Roman",serif}
+.lpldf-season-pack__content>span{font-size:1.35rem;font-weight:900}
+.lpldf-season-pack__content del{margin-right:7px;color:#b9c8cf;font-size:.9rem}
+.lpldf-season-pack__content b{display:block;margin-top:18px;color:#f2c55e;font-size:.92rem}
 
 .lpldf-review-grid{
   display:grid;
@@ -928,6 +1043,14 @@ footer.footer a:hover{color:#f2c55e!important}
   .lpldf-book-card>img{padding:18px 12px 5px}
   .lpldf-book-card__body{padding:14px}
   .lpldf-book-card__body strong{font-size:.96rem}
+  .lpldf-collection-nav .lpldf-shell{justify-content:flex-start}
+  .lpldf-collection-feature,.lpldf-collection-feature--reverse{grid-template-columns:1fr;padding:24px}
+  .lpldf-collection-feature--reverse>img{order:0}
+  .lpldf-collection-feature>img{max-height:430px}
+  .lpldf-collection-feature__footer{align-items:stretch;flex-direction:column}
+  .lpldf-season-pack{grid-template-columns:1fr;padding:28px 20px}
+  .lpldf-season-pack__covers{min-height:190px}
+  .lpldf-season-pack__content{align-items:center;text-align:center}
   .lpldf-review-grid{grid-template-columns:1fr}
   .lpldf-review-card:nth-child(2){transform:none}
   .lpldf-pack-card{padding:20px;transform:none}
@@ -935,6 +1058,8 @@ footer.footer a:hover{color:#f2c55e!important}
 
 @media(min-width:761px) and (max-width:1050px){
   .lpldf-book-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .lpldf-book-grid--five{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .lpldf-season-pack{grid-template-columns:1fr}
 }
 
 @media(prefers-reduced-motion:reduce){
