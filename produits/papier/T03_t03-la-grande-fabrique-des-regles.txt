@@ -8,92 +8,25 @@ PRIX
 10 EUR
 
 TAGS CONSEILLÉS
-livre-papier, t03, saison-1
+Livres papier, Saison 1, Tome 03, Bastiat
 
 IMAGE PRINCIPALE
 lpldf-t03-couverture-3d.png
 
+DESCRIPTION COURTE
+Une enquête pour distinguer la règle qui protège de celle qui finit par empêcher chacun d’agir.
+
 DESCRIPTION EN TEXTE SIMPLE À COPIER
 --- DÉBUT ---
-Une enquête pour comprendre qu’une règle peut protéger la liberté ou, au contraire, remplacer les choix de chacun.
+La Grande Fabrique produit de nouvelles règles pour chaque geste du village. Certaines protègent réellement les personnes et leurs outils ; d’autres accumulent formulaires, autorisations et délais jusqu’à immobiliser les artisans.
 
-La Grande Fabrique des règles tourne avec enthousiasme. Une règle protège les outils contre le vol ; puis d’autres exigent des formulaires, des autorisations et des délais pour chaque geste. Une couturière ne peut plus ouvrir, un boulanger attend et les artisans s’immobilisent.
+Dans l’esprit de « La Loi » de Bastiat, Fred aide les enfants à rechercher le danger précis qu’une règle empêche et le coût des contraintes qu’elle ajoute.
 
 « La loi doit protéger les mains qui travaillent, pas les attacher. »
-
-Au cœur de cette aventure
-
-À la Fabrique des règles, de nouveaux formulaires apparaissent chaque jour pour tout organiser. Les intentions semblent bonnes, mais les artisans du village finissent par ne plus pouvoir travailler.
-
-L’objet qui accompagne la découverte est le parchemin, badge d’une loi lisible qui protège sans attacher les mains. Comme tous les objets merveilleux de la collection, il ne donne pas la réponse à la place des enfants : il rend visible un mécanisme qu’ils pourront ensuite expliquer sans lui.
-
-Ce que l’enfant apprend à faire
-
-• distinguer une règle qui protège d’une règle qui commande
-• observer comment les règles s’accumulent
-• comprendre pourquoi une bonne intention ne garantit pas un bon résultat
-
-La leçon ne prend jamais la forme d’un sermon. L’enfant prévoit, observe, compare, explique, puis essaie de transférer son raisonnement dans une autre situation.
-
-Une seconde lecture pour les parents
-
-Le tome évite le raccourci « toute règle est mauvaise ». Il donne une distinction plus exigeante : quel danger précis la règle empêche-t-elle, qui contraint-elle et reste-t-elle proportionnée ?
-
-Après la lecture, nul besoin de faire réciter une définition. Demandez plutôt ce qui a fait changer d’avis les personnages, qui avait été oublié et comment ils ont réparé la situation.
-
-Le guide et l’inspiration du tome
-
-Fred, alter ego fictionnel de Frédéric Bastiat
-
-Dans l’esprit de La Loi de Bastiat, Fred aide les enfants à séparer la protection des personnes et des biens de la fabrication administrative de leurs décisions.
-
-Concept central : loi protectrice, loi qui commande et surcharge réglementaire.
-
-Trois questions pour prolonger la lecture
-
-• Quelle première règle protège réellement les habitants ?
-• À quel moment la Fabrique commence-t-elle à empêcher d’agir ?
-• Comment vérifier qu’une règle est encore utile ?
-
-Ce que contient l’album
-
-• une aventure complète construite comme une enquête miniature ;
-
-• huit mouvements narratifs alternant texte et illustration ;
-
-• un débrief accessible pour reformuler la découverte ;
-
-• un jeu des sept différences, un jeu des ombres et un quiz ;
-
-• une présentation du guide historique ou intellectuel ;
-
-• un badge ajouté au grand carnet de la collection.
-
-Informations bibliographiques
-
-• Collection : Les Petites Leçons de Frédéric
-
-• Tome : 03
-
-• Public conseillé : dès 7 ans
-
-• Lecture : autonome ou accompagnée
-
-• Format : carré, environ 15 × 15 cm
-
-• Nombre de pages : 38
-
-• Langue : français
-
-• Auteur : Scuba Wizard
-
-• ISBN : 9798278977070
-
-À qui offrir ce livre ?
-
-À un enfant curieux de 7 à 10 ans, à une famille qui aime discuter après une histoire, à un enseignant ou un éducateur cherchant un support concret, ou simplement à un jeune lecteur qui apprécie les villages, les énigmes et les objets mystérieux.
-
-Paiement et livraison
-
-Prix : 10 €. Paiement selon les moyens activés sur la boutique, notamment en euros et en Bitcoin. Le livre est préparé avec soin puis expédié avec suivi via Mondial Relay.
 --- FIN ---
+
+DONNÉES DE CONTRÔLE
+Format : 21 × 21 cm
+Pagination : 38 pages, couverture comprise
+Public : dès 7 ans
+ISBN : 9798278977070

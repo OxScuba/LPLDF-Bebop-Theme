@@ -2,6 +2,16 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.4.4
+
+- réécriture des onze fiches papier T00 à T10 à partir du corpus publié de l’Atelier LPLDF ;
+- descriptions natives raccourcies pour éviter leur répétition avec les blocs CMS ;
+- ajout d’une description courte propre à chaque tome ;
+- correction canonique de la présentation du Tome 08 ;
+- correction globale du format physique : 21 × 21 cm, 38 pages couverture comprise ;
+- correction cohérente des trois fiches de packs ;
+- ajout de contrôles empêchant le retour de dimensions physiques erronées.
+
 ## 5.4.3
 
 - suppression du collage de couvertures du Pack Saison 2, que be-BOP pouvait extraire de son conteneur ;

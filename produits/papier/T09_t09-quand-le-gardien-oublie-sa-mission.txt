@@ -8,92 +8,25 @@ PRIX
 10 EUR
 
 TAGS CONSEILLÉS
-livre-papier, t09, saison-2
+Livres papier, Saison 2, Tome 09, John Locke, Pouvoir
 
 IMAGE PRINCIPALE
 lpldf-t09-couverture-3d.png
 
+DESCRIPTION COURTE
+Une aventure sur le pouvoir confié, sa mission précise et la frontière entre protéger et diriger.
+
 DESCRIPTION EN TEXTE SIMPLE À COPIER
 --- DÉBUT ---
-Une histoire sur le pouvoir confié et son extension progressive, racontée à hauteur de cour de récréation.
+Léon doit sécuriser le passage de la Cour des Saules. Il protège d’abord correctement les enfants, puis commence à choisir leurs horaires, leurs équipes, leurs jeux et leurs gestes.
 
-Léon reçoit une tâche précise : sécuriser le passage de la Cour des Saules. Il commence par protéger correctement les enfants, puis choisit leurs horaires, leurs équipes, leurs jeux et leurs gestes. Le gardien est devenu pilote.
+Avec John, le groupe comprend qu’un pouvoir reste légitime lorsque sa mission est claire, limitée et vérifiable. Le gardien demeure utile, mais il cesse de devenir le pilote de la cour.
 
 « Le gardien protège. Il ne pilote pas. »
-
-Au cœur de cette aventure
-
-Léon devait garder l’entrée de la Cour des Saules. Pour mieux protéger les habitants, il commence pourtant à décider de leurs horaires, de leurs jeux et de leurs déplacements.
-
-L’objet qui accompagne la découverte est le bouclier, symbole d’une protection forte parce que sa mission reste limitée. Comme tous les objets merveilleux de la collection, il ne donne pas la réponse à la place des enfants : il rend visible un mécanisme qu’ils pourront ensuite expliquer sans lui.
-
-Ce que l’enfant apprend à faire
-
-• comprendre qu’un pouvoir est confié pour une mission précise
-• observer comment une mission peut s’étendre progressivement
-• distinguer protéger les autres de diriger leur vie
-
-La leçon ne prend jamais la forme d’un sermon. L’enfant prévoit, observe, compare, explique, puis essaie de transférer son raisonnement dans une autre situation.
-
-Une seconde lecture pour les parents
-
-Le livre permet de questionner la mission d’une autorité sans caricaturer celui qui l’exerce. Léon veut sincèrement éviter les accidents ; c’est justement ce qui rend la dérive instructive.
-
-Après la lecture, nul besoin de faire réciter une définition. Demandez plutôt ce qui a fait changer d’avis les personnages, qui avait été oublié et comment ils ont réparé la situation.
-
-Le guide et l’inspiration du tome
-
-John Locke, appelé John dans l’histoire
-
-John revient sur la confiance et ses limites. La réparation n’abolit pas le gardien : elle redéfinit sa mission et rend son pouvoir contrôlable.
-
-Concept central : pouvoir confié, protection et limites de mission.
-
-Trois questions pour prolonger la lecture
-
-• Quelle mission Madame Aline confie-t-elle à Léon ?
-• À quel moment commence-t-il à décider autre chose ?
-• Comment écrire une mission assez claire pour pouvoir la vérifier ?
-
-Ce que contient l’album
-
-• une aventure complète construite comme une enquête miniature ;
-
-• huit mouvements narratifs alternant texte et illustration ;
-
-• un débrief accessible pour reformuler la découverte ;
-
-• un jeu des sept différences, un jeu des ombres et un quiz ;
-
-• une présentation du guide historique ou intellectuel ;
-
-• un badge ajouté au grand carnet de la collection.
-
-Informations bibliographiques
-
-• Collection : Les Petites Leçons de Frédéric
-
-• Tome : 09
-
-• Public conseillé : dès 7 ans
-
-• Lecture : autonome ou accompagnée
-
-• Format : carré, environ 15 × 15 cm
-
-• Nombre de pages : 38
-
-• Langue : français
-
-• Auteur : Scuba Wizard
-
-• ISBN : 9798253904756
-
-À qui offrir ce livre ?
-
-À un enfant curieux de 7 à 10 ans, à une famille qui aime discuter après une histoire, à un enseignant ou un éducateur cherchant un support concret, ou simplement à un jeune lecteur qui apprécie les villages, les énigmes et les objets mystérieux.
-
-Paiement et livraison
-
-Prix : 10 €. Paiement selon les moyens activés sur la boutique, notamment en euros et en Bitcoin. Le livre est préparé avec soin puis expédié avec suivi via Mondial Relay.
 --- FIN ---
+
+DONNÉES DE CONTRÔLE
+Format : 21 × 21 cm
+Pagination : 38 pages, couverture comprise
+Public : dès 7 ans
+ISBN : 9798253904756

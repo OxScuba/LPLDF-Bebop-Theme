@@ -8,92 +8,25 @@ PRIX
 10 EUR
 
 TAGS CONSEILLÉS
-livre-papier, t00, hors-serie
+Livres papier, Hors-série, Tome 00
 
 IMAGE PRINCIPALE
 lpldf-t00-couverture-3d.png
 
+DESCRIPTION COURTE
+Le point de départ idéal pour rencontrer Fred, Lina, Tom et Milo et découvrir la méthode de toute la collection.
+
 DESCRIPTION EN TEXTE SIMPLE À COPIER
 --- DÉBUT ---
-Un album d’entrée qui transforme la collection en territoire à explorer. L’enfant rencontre les héros, les guides et les questions qui reviendront au fil des saisons.
+Fred ouvre un grand carnet encore presque vide. Avec Lina, Tom et Milo, il invite les jeunes lecteurs à observer le village, à poser les bonnes questions et à suivre les conséquences d’une idée avant de se faire un avis.
 
-Fred ouvre un carnet encore presque vide. Autour de lui, Lina, Tom et Milo découvrent qu’une idée ne se juge pas seulement à son intention : il faut regarder ce qu’elle change, qui choisit, qui supporte le coût et ce qui disparaît parfois hors du cadre.
+Un album d’entrée pour découvrir les aventuriers, les futurs guides et le fil conducteur de la saga : observer, comprendre et choisir.
 
 « Observer. Comprendre. Choisir. »
-
-Au cœur de cette aventure
-
-Avant de commencer les aventures, Fred ouvre son grand carnet. Avec Lina, Tom et Milo, il invite les jeunes lecteurs à découvrir les questions qui guideront toute la collection.
-
-L’objet qui accompagne la découverte est le grand carnet où seront conservés les questions, les badges et la mémoire des aventures. Comme tous les objets merveilleux de la collection, il ne donne pas la réponse à la place des enfants : il rend visible un mécanisme qu’ils pourront ensuite expliquer sans lui.
-
-Ce que l’enfant apprend à faire
-
-• faire connaissance avec Fred, Lina, Tom et Milo
-• découvrir la méthode d’observation de la collection
-• comprendre qu’une bonne question peut ouvrir plusieurs chemins
-
-La leçon ne prend jamais la forme d’un sermon. L’enfant prévoit, observe, compare, explique, puis essaie de transférer son raisonnement dans une autre situation.
-
-Une seconde lecture pour les parents
-
-Le T00 est particulièrement utile au parent qui souhaite comprendre la démarche avant d’entrer dans les récits. Il donne des repères sans livrer d’opinions toutes faites.
-
-Après la lecture, nul besoin de faire réciter une définition. Demandez plutôt ce qui a fait changer d’avis les personnages, qui avait été oublié et comment ils ont réparé la situation.
-
-Le guide et l’inspiration du tome
-
-Fred et l’ensemble des guides
-
-Fred présente la méthode de la saga et ouvre les chemins qui mèneront vers Bastiat, Locke, les économistes, les penseurs de la liberté et finalement Bitcoin.
-
-Concept central : observer, questionner et suivre les conséquences.
-
-Trois questions pour prolonger la lecture
-
-• Quelle question aimerais-tu inscrire dans le grand carnet ?
-• Quelle différence vois-tu entre observer et simplement regarder ?
-• Pourquoi peut-on changer d’avis après une expérience ?
-
-Ce que contient l’album
-
-• une aventure complète construite comme une enquête miniature ;
-
-• huit mouvements narratifs alternant texte et illustration ;
-
-• un débrief accessible pour reformuler la découverte ;
-
-• un jeu des sept différences, un jeu des ombres et un quiz ;
-
-• une présentation du guide historique ou intellectuel ;
-
-• un badge ajouté au grand carnet de la collection.
-
-Informations bibliographiques
-
-• Collection : Les Petites Leçons de Frédéric
-
-• Tome : 00
-
-• Public conseillé : dès 7 ans
-
-• Lecture : autonome ou accompagnée
-
-• Format : carré, environ 15 × 15 cm
-
-• Nombre de pages : 38
-
-• Langue : français
-
-• Auteur : Scuba Wizard
-
-• ISBN : 9798246395424
-
-À qui offrir ce livre ?
-
-À un enfant curieux de 7 à 10 ans, à une famille qui aime discuter après une histoire, à un enseignant ou un éducateur cherchant un support concret, ou simplement à un jeune lecteur qui apprécie les villages, les énigmes et les objets mystérieux.
-
-Paiement et livraison
-
-Prix : 10 €. Paiement selon les moyens activés sur la boutique, notamment en euros et en Bitcoin. Le livre est préparé avec soin puis expédié avec suivi via Mondial Relay.
 --- FIN ---
+
+DONNÉES DE CONTRÔLE
+Format : 21 × 21 cm
+Pagination : 38 pages, couverture comprise
+Public : dès 7 ans
+ISBN : 9798246395424
