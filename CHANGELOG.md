@@ -2,6 +2,13 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.4.7
+
+- suppression des largeurs minimales héritées de la mise en page produit pour ordinateur ;
+- adaptation mobile complète du titre, de la galerie, des miniatures et du panneau d’achat ;
+- suppression du découpage horizontal des boutons et de la description native ;
+- sécurisation de la largeur des blocs CMS produit sans modifier le header ni le footer.
+
 ## 5.4.6
 
 - restauration du comportement natif des miniatures produit : elles changent l’image affichée sans ouvrir la visionneuse ;

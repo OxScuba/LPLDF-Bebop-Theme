@@ -1115,6 +1115,103 @@ footer.footer a:hover{color:#f2c55e!important}
     box-sizing:border-box!important;
   }
   body>.body-mainPlan{flex:1 0 auto!important}
+  /* La fiche produit native utilise des flex-items dont la largeur minimale
+     reste basée sur le contenu desktop. On autorise ici leur réduction réelle. */
+  main.mx-auto.max-w-7xl.px-6.py-10{
+    display:block!important;
+    overflow:visible!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10>.flex.flex-row.my-12{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    margin-block:36px!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10>.flex.flex-row.my-12>*,
+  main.mx-auto.max-w-7xl.px-6.py-10>.flex.flex-row.my-12 .grow,
+  main.mx-auto.max-w-7xl.px-6.py-10>.flex.flex-row.my-12 .flex.flex-col.gap-4,
+  main.mx-auto.max-w-7xl.px-6.py-10>.flex.flex-row.my-12 form{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 h1.body-title{
+    max-width:100%!important;
+    font-size:clamp(2rem,9vw,2.65rem)!important;
+    line-height:1.08!important;
+    overflow-wrap:anywhere!important;
+    word-break:normal!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 .aspect-video{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 .aspect-video>img{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    transform:none!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 .flex.flex-row.min-w-\[96px\]{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+    box-sizing:border-box!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 .lg\:border-l{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    padding-inline:0!important;
+    overflow:visible!important;
+    box-sizing:border-box!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 .lg\:border-l .prose,
+  main.mx-auto.max-w-7xl.px-6.py-10 .lg\:border-l button{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+    white-space:normal!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 .prose{
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+    overflow-wrap:anywhere!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 .prose.max-w-full:has(.lpldf-product-extra){
+    width:100%!important;
+    padding:0!important;
+    overflow:visible!important;
+  }
+  main.mx-auto.max-w-7xl.px-6.py-10 .prose.max-w-full:has(.lpldf-product-extra)>.my-5,
+  .lpldf-product-extra,
+  .lpldf-product-extra .lpldf-shell,
+  .lpldf-product-extra__grid,
+  .lpldf-product-extra__cards,
+  .lpldf-product-extra__card,
+  .lpldf-product-extra__questions{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+  .lpldf-product-extra h2,
+  .lpldf-product-extra h3,
+  .lpldf-product-extra p,
+  .lpldf-product-extra li,
+  .lpldf-product-extra blockquote{
+    max-width:100%!important;
+    overflow-wrap:anywhere!important;
+  }
   header.header{height:auto!important;min-height:72px}
   header.header>div,header.navbar>div{padding-inline:16px!important}
   header.header img{width:44px!important;height:44px!important}
