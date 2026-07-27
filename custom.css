@@ -478,54 +478,54 @@ main.mx-auto.max-w-7xl.px-6.py-10 .prose.max-w-full:has(.lpldf-product-extra)>.m
   width:100%;
   margin-inline:0!important;
 }
-.lpldf-native-gallery-close{display:none!important}
-
-/* La sélection native ?picture=… devient une visionneuse plein écran.
-   Aucune image supplémentaire n’est injectée dans le flux de la fiche. */
-main.mx-auto.max-w-7xl.px-6.py-10:has(.lpldf-product-extra):has(a[href^="?picture"] img.ring-2) .aspect-video{
-  position:fixed!important;
-  z-index:9998!important;
-  inset:0!important;
-  display:grid!important;
-  place-items:center!important;
-  width:100vw!important;
-  height:100dvh!important;
-  min-height:100dvh!important;
-  padding:clamp(14px,4vw,54px)!important;
-  overflow:hidden!important;
-  background:rgba(9,24,34,.94)!important;
+/* La visionneuse est ouverte uniquement par un clic sur la grande image.
+   Les miniatures conservent donc exactement le comportement natif be-BOP. */
+main.mx-auto.max-w-7xl.px-6.py-10:has(.lpldf-product-extra) .aspect-video>img.lpldf-gallery-ready{
+  cursor:zoom-in;
+}
+.lpldf-image-lightbox[hidden]{display:none!important}
+.lpldf-image-lightbox{
+  position:fixed;
+  z-index:10000;
+  inset:0;
+  display:grid;
+  place-items:center;
+  box-sizing:border-box;
+  width:100%;
+  height:100dvh;
+  padding:clamp(14px,4vw,54px);
+  background:rgba(9,24,34,.94);
   backdrop-filter:blur(10px);
 }
-main.mx-auto.max-w-7xl.px-6.py-10:has(.lpldf-product-extra):has(a[href^="?picture"] img.ring-2) .aspect-video>img{
-  display:block!important;
-  width:auto!important;
-  max-width:min(1180px,94vw)!important;
-  height:auto!important;
-  max-height:90dvh!important;
-  object-fit:contain!important;
-  transform:none!important;
-  border-radius:18px!important;
+.lpldf-image-lightbox__image{
+  display:block;
+  width:auto;
+  max-width:min(1180px,94vw);
+  height:auto;
+  max-height:90dvh;
+  object-fit:contain;
+  border-radius:18px;
   background:var(--lpldf-cream);
   box-shadow:0 35px 90px rgba(0,0,0,.48);
 }
-main.mx-auto.max-w-7xl.px-6.py-10:has(.lpldf-product-extra):has(a[href^="?picture"] img.ring-2) .lpldf-native-gallery-close{
-  position:fixed!important;
-  z-index:10001!important;
-  top:max(16px,env(safe-area-inset-top))!important;
-  right:max(16px,env(safe-area-inset-right))!important;
-  display:grid!important;
-  place-items:center!important;
-  width:48px!important;
-  height:48px!important;
-  border:1px solid rgba(255,255,255,.28)!important;
-  border-radius:50%!important;
-  background:#fff!important;
-  color:var(--lpldf-ink)!important;
-  font:700 1.8rem/1 Arial,sans-serif!important;
-  text-decoration:none!important;
-  box-shadow:0 12px 34px rgba(0,0,0,.32)!important;
+.lpldf-image-lightbox__close{
+  position:absolute;
+  top:max(16px,env(safe-area-inset-top));
+  right:max(16px,env(safe-area-inset-right));
+  display:grid;
+  place-items:center;
+  width:48px;
+  height:48px;
+  padding:0;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:50%;
+  background:#fff;
+  color:var(--lpldf-ink);
+  font:700 1.8rem/1 Arial,sans-serif;
+  cursor:pointer;
+  box-shadow:0 12px 34px rgba(0,0,0,.32);
 }
-html:has(main.mx-auto.max-w-7xl.px-6.py-10 .lpldf-product-extra):has(main.mx-auto.max-w-7xl.px-6.py-10 a[href^="?picture"] img.ring-2){overflow:hidden}
+html.lpldf-lightbox-open{overflow:hidden!important}
 .lpldf-product-extra__intro{
   padding:clamp(58px,8vw,100px) 0;
   background:
@@ -1095,6 +1095,26 @@ footer.footer a:hover{color:#f2c55e!important}
 }
 
 @media(max-width:760px){
+  html,body{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow-x:hidden!important;
+  }
+  body{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  body>*,body>.body-mainPlan,header.header,header.navbar,main.mx-auto.max-w-7xl,footer.footer{
+    flex:none!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin-inline:0!important;
+    box-sizing:border-box!important;
+  }
+  body>.body-mainPlan{flex:1 0 auto!important}
   header.header{height:auto!important;min-height:72px}
   header.header>div,header.navbar>div{padding-inline:16px!important}
   header.header img{width:44px!important;height:44px!important}
@@ -1117,6 +1137,8 @@ footer.footer a:hover{color:#f2c55e!important}
   .lpldf-review-grid{grid-template-columns:1fr}
   .lpldf-review-card:nth-child(2){transform:none}
   .lpldf-pack-card{padding:20px;transform:none}
+  .lpldf-image-lightbox{padding:12px}
+  .lpldf-image-lightbox__image{max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);border-radius:12px}
 }
 
 @media(min-width:761px) and (max-width:1050px){

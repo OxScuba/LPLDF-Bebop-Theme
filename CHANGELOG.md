@@ -2,6 +2,13 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.4.6
+
+- restauration du comportement natif des miniatures produit : elles changent l’image affichée sans ouvrir la visionneuse ;
+- ouverture plein écran réservée au clic sur la grande image affichée ;
+- ajout d’une visionneuse accessible et fermable par bouton, clic sur le fond ou touche Échap ;
+- correction renforcée de la largeur mobile au niveau global de la page be-BOP.
+
 ## 5.4.5
 
 - suppression du débordement horizontal créé par le bloc CMS produit ;

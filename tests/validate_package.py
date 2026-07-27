@@ -63,6 +63,19 @@ def main():
         if '<div class="lpldf-page' not in content:
             fail(f"{path.name}: conteneur .lpldf-page absent", failures)
 
+    collection = (ROOT / "cms" / "La_Collection.html").read_text(encoding="utf-8")
+    if "[Product=" in collection or "lpldf-product-widget" in collection:
+        fail(
+            "La_Collection.html: shortcode produit incompatible avec le HTML avancé",
+            failures,
+        )
+    if collection.count("lpldf-book-card") < 10:
+        fail("La_Collection.html: cartes de livres incomplètes", failures)
+    if "lpldf-season-pack__covers" in collection:
+        fail("La_Collection.html: ancien collage instable du Pack Saison 2", failures)
+    if collection.count("lpldf-collection-feature__actions") != 2:
+        fail("La_Collection.html: blocs de prix des Tomes 00 et 10 incomplets", failures)
+
     css = (ROOT / "custom.css").read_text(encoding="utf-8")
     if css.count("{") != css.count("}"):
         fail("custom.css: accolades non équilibrées", failures)
@@ -72,6 +85,18 @@ def main():
         fail("custom.css: règles principales absentes", failures)
     if ".lpldf-adventurers-simple" not in css:
         fail("custom.css: sélecteur des aventuriers absent", failures)
+    if ".lpldf-image-lightbox" not in css:
+        fail("custom.css: visionneuse des images produit absente", failures)
+
+    gallery_script = ROOT / "product-gallery.js"
+    if not gallery_script.exists():
+        fail("product-gallery.js: script de visionneuse absent", failures)
+    else:
+        gallery_js = gallery_script.read_text(encoding="utf-8")
+        if ".aspect-video img" not in gallery_js or "displayedImage.addEventListener" not in gallery_js:
+            fail("product-gallery.js: branchement sur la grande image absent", failures)
+        if "a[href" in gallery_js or "ring-2" in gallery_js:
+            fail("product-gallery.js: les miniatures ne doivent pas ouvrir la visionneuse", failures)
 
     product_cms_files = sorted((ROOT / "produits" / "cms-apres-produit").glob("*.html"))
     if len(product_cms_files) != 11:
@@ -85,6 +110,10 @@ def main():
             fail(f"{path.name}: import du thème CSS absent", failures)
         if "lpldf-product-extra" not in content:
             fail(f"{path.name}: bloc éditorial produit absent", failures)
+        if content.count("product-gallery.js") != 1:
+            fail(f"{path.name}: chargement de la visionneuse produit absent", failures)
+        if "21 × 21 cm · 38 pages" not in content:
+            fail(f"{path.name}: format physique 21 × 21 cm absent", failures)
         if parser.images_without_alt or parser.links_without_href:
             fail(f"{path.name}: attribut HTML obligatoire manquant", failures)
 
@@ -95,6 +124,10 @@ def main():
     isbns = []
     for path in product_files:
         content = path.read_text(encoding="utf-8")
+        if "DESCRIPTION COURTE" not in content:
+            fail(f"{path.name}: description courte absente", failures)
+        if "Format : 21 × 21 cm" not in content:
+            fail(f"{path.name}: format physique 21 × 21 cm absent", failures)
         found = isbn_pattern.findall(content)
         if len(found) != 1:
             fail(f"{path.name}: un ISBN attendu, {len(found)} trouvé(s)", failures)
@@ -110,6 +143,8 @@ def main():
             text = path.read_text(encoding="utf-8")
             if "REMPLACER_IMG_" in text:
                 forbidden.append(str(path.relative_to(ROOT)))
+            if "15 × 15" in text or "15x15" in text:
+                fail(f"{path.relative_to(ROOT)}: ancien format 15 × 15 cm", failures)
     if forbidden:
         fail("Placeholders restants : " + ", ".join(forbidden), failures)
 
