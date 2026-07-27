@@ -33,7 +33,9 @@
 
 ## Conversion
 
-- le Pack Découverte est visible avant le premier long défilement ;
+- les deux packs sont visibles avant le premier long défilement ;
+- le Pack Découverte affiche 40 € au lieu de 50 € et le Tome 00 offert ;
+- le Pack Liberté et responsabilité affiche 45 € au lieu de 50 € ;
 - le prix et l’économie sont explicites ;
 - un bouton d’achat ou de choix apparaît après chaque grande section ;
 - la livraison, le paiement et le contact sont rassurants ;

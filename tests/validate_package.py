@@ -73,6 +73,10 @@ def main():
         fail("La_Collection.html: cartes de livres incomplètes", failures)
     if "lpldf-season-pack__covers" in collection:
         fail("La_Collection.html: ancien collage instable du Pack Saison 2", failures)
+    if collection.count("lpldf-pack-choice") < 2:
+        fail("La_Collection.html: les deux packs ne sont pas présentés", failures)
+    if collection.count("/product/pack-saison-2-t05-t09") != 1:
+        fail("La_Collection.html: lien unique vers le Pack Saison 2 attendu", failures)
     if collection.count("lpldf-collection-feature__actions") != 2:
         fail("La_Collection.html: blocs de prix des Tomes 00 et 10 incomplets", failures)
 
@@ -113,6 +117,25 @@ def main():
         if content.count("product-gallery.js") != 1:
             fail(f"{path.name}: chargement de la visionneuse produit absent", failures)
         if "21 × 21 cm · 38 pages" not in content:
+            fail(f"{path.name}: format physique 21 × 21 cm absent", failures)
+        if parser.images_without_alt or parser.links_without_href:
+            fail(f"{path.name}: attribut HTML obligatoire manquant", failures)
+
+    pack_cms_files = sorted((ROOT / "produits" / "cms-apres-pack").glob("*.html"))
+    if len(pack_cms_files) != 2:
+        fail(f"2 blocs CMS pack attendus, {len(pack_cms_files)} trouvés", failures)
+    for path in pack_cms_files:
+        content = path.read_text(encoding="utf-8")
+        parser = FragmentParser()
+        parser.feed(content)
+        parser.close()
+        if "custom.css" not in content:
+            fail(f"{path.name}: import du thème CSS absent", failures)
+        if "lpldf-product-extra" not in content or "lpldf-pack-volumes" not in content:
+            fail(f"{path.name}: contenu éditorial du pack incomplet", failures)
+        if content.count("lpldf-pack-volume") < 5:
+            fail(f"{path.name}: les cinq tomes du pack ne sont pas présentés", failures)
+        if "21 × 21 cm" not in content:
             fail(f"{path.name}: format physique 21 × 21 cm absent", failures)
         if parser.images_without_alt or parser.links_without_href:
             fail(f"{path.name}: attribut HTML obligatoire manquant", failures)
@@ -158,6 +181,7 @@ def main():
     print(f"- {len(cms_files)} pages CMS")
     print(f"- {len(product_files)} fiches papier et {len(set(isbns))} ISBN uniques")
     print(f"- {len(product_cms_files)} blocs CMS après produit")
+    print(f"- {len(pack_cms_files)} blocs CMS après pack")
     print("- CSS équilibré, badge de test absent")
     print("- Aucun placeholder d’image restant hors juridique")
     return 0

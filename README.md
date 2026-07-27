@@ -65,7 +65,8 @@ LPLDF-Bebop-Theme/
 ├── produits/
 │   ├── papier/             descriptions des albums papier
 │   ├── packs/              descriptions des offres groupées
-│   └── cms-apres-produit/  blocs visuels sous les fiches produit
+│   ├── cms-apres-produit/  blocs visuels sous les fiches des tomes
+│   └── cms-apres-pack/     blocs visuels sous les fiches des packs
 ├── donnees/                ISBN, slugs, tags, SEO et contrôles
 ├── docs/                   installation et maintenance
 ├── juridique/              modèles publics à compléter avant usage
@@ -131,6 +132,7 @@ Pour le détail, consulter :
 - [remplacement du dépôt local](docs/REMPLACER_DEPOT_LOCAL.md) ;
 - [maintenance du dépôt](docs/MAINTENANCE.md) ;
 - [architecture des contenus](docs/ARCHITECTURE.md) ;
+- [installation des CMS des packs](docs/INSTALLER_PACKS_V5.5.md) ;
 - [configuration du thème natif](docs/THEME_NATIF_BEBOP.md) ;
 - [plan des CMS](docs/PLAN_CMS.md).
 
@@ -145,6 +147,7 @@ Le script de validation contrôle notamment :
 - l’absence de placeholders ;
 - les 11 fiches papier et leurs ISBN ;
 - les 11 blocs éditoriaux après produit ;
+- les 2 blocs éditoriaux après pack ;
 - l’équilibre syntaxique du CSS.
 
 ```bash

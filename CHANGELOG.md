@@ -2,6 +2,14 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.5
+
+- création de deux CMS enrichis pour les Packs Découverte et Saison 2 ;
+- raccourcissement des descriptions natives afin d’éviter les répétitions ;
+- présentation commerciale équilibrée des deux packs sur la page Collection ;
+- ajout visible du Pack Liberté et responsabilité à 45 € au lieu de 50 € ;
+- suppression du second rappel redondant du Pack Saison 2 sous les tomes.
+
 ## 5.4.7
 
 - suppression des largeurs minimales héritées de la mise en page produit pour ordinateur ;
