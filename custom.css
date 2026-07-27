@@ -299,7 +299,18 @@ html:has(.lpldf-lightbox:target){overflow:hidden}
   width:100%;
   height:100%;
   object-fit:contain;
+  object-position:center center;
   filter:drop-shadow(0 22px 24px rgba(24,50,71,.16));
+}
+.lpldf-adventurers-simple__visual .lpldf-adventurer-panel--portrait img{
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:100%;
+  margin:0;
+  padding:4px 0 10px;
+  object-fit:contain;
+  object-position:center bottom;
 }
 .lpldf-adventurers-simple__choices{
   display:flex;
@@ -326,6 +337,8 @@ html:has(.lpldf-lightbox:target){overflow:hidden}
 }
 .lpldf-adventurers-simple__choices label:after{content:"→";color:#f2c55e}
 .lpldf-adventurers-simple__choices label:hover{transform:translateX(6px);border-color:var(--lpldf-gold);background:rgba(255,255,255,.14)}
+.lpldf-adventurers-simple__universe{justify-content:center;margin-top:8px;border:1px solid #f2c55e;background:#f2c55e;color:var(--lpldf-ink)!important}
+.lpldf-adventurers-simple__universe:hover{background:#fff;color:var(--lpldf-ink)!important}
 #lpldf-adventurer-fred:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--group,
 #lpldf-adventurer-lina:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--group,
 #lpldf-adventurer-tom:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--group,
@@ -334,6 +347,7 @@ html:has(.lpldf-lightbox:target){overflow:hidden}
 #lpldf-adventurer-lina:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--lina,
 #lpldf-adventurer-tom:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--tom,
 #lpldf-adventurer-milo:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--milo{visibility:visible;opacity:1;transform:none}
+#lpldf-adventurer-group:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-group"],
 #lpldf-adventurer-fred:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-fred"],
 #lpldf-adventurer-lina:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-lina"],
 #lpldf-adventurer-tom:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-tom"],
@@ -437,9 +451,10 @@ footer{border-top:4px solid var(--lpldf-gold)}
   .lpldf-adventurers__tabs label:first-child{grid-column:1/-1}
   .lpldf-adventurers__copy>.lpldf-button{align-self:stretch}
   .lpldf-adventurers-simple__stage{grid-template-columns:1fr}
-  .lpldf-adventurers-simple__visual{min-height:430px}
+  .lpldf-adventurers-simple__visual{min-height:470px}
   .lpldf-adventurers-simple__choices{display:grid;grid-template-columns:1fr 1fr;padding:24px}
   .lpldf-adventurers-simple__choices label{min-height:56px}
+  .lpldf-adventurers-simple__universe{grid-column:1/-1;width:100%}
   .lpldf-character-card{grid-template-columns:130px 1fr;min-height:230px}.lpldf-character-card div{padding:22px}.lpldf-character-card p{font-size:.88rem}
   .lpldf-products-grid,.lpldf-tag-zone,.lpldf-story-path ol,.lpldf-ritual,.lpldf-use-grid,.lpldf-resident-grid{grid-template-columns:1fr}.lpldf-mini-characters{grid-template-columns:1fr 1fr}
   .lpldf-pro-callout{display:block}.lpldf-pro-callout .lpldf-button{margin-top:24px}.lpldf-legal-note{padding:28px}

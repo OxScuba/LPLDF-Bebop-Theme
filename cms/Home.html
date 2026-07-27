@@ -1,5 +1,42 @@
 <style>
 @import url("https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css");
+/* V5.4 — garde-fous critiques : restent actifs même si GitHub Pages sert
+   temporairement une ancienne version du thème. */
+.lpldf-page .lpldf-lightbox{position:fixed!important;z-index:9999!important;inset:0!important;display:grid!important;place-items:center!important;padding:24px!important;background:rgba(10,29,41,.88)!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+.lpldf-page .lpldf-lightbox:target{visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+.lpldf-page .lpldf-lightbox__backdrop{position:absolute!important;inset:0!important}
+.lpldf-page .lpldf-lightbox>figure{position:relative!important;z-index:1!important;width:min(1080px,94vw)!important;max-height:90vh!important;margin:0!important;overflow:auto!important;border-radius:20px!important;background:#fff!important}
+.lpldf-page .lpldf-lightbox>figure>img{display:block!important;width:100%!important;max-height:78vh!important;object-fit:contain!important}
+.lpldf-page .lpldf-lightbox__close{position:absolute!important;z-index:2!important;top:12px!important;right:12px!important;display:grid!important;place-items:center!important;width:44px!important;height:44px!important;border-radius:50%!important;background:#fff!important;color:#183247!important;font-size:28px!important;text-decoration:none!important;box-shadow:0 8px 24px rgba(0,0,0,.22)!important}
+.lpldf-page .lpldf-lightbox-anchor{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important}
+
+.lpldf-page .lpldf-adventurers-simple>input{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+.lpldf-page .lpldf-adventurers-simple__stage{display:grid!important;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr)!important;min-height:540px!important;border:1px solid #d9d3c4!important;border-radius:26px!important;background:#fff!important;overflow:hidden!important;box-shadow:0 20px 55px rgba(24,50,71,.12)!important}
+.lpldf-page .lpldf-adventurers-simple__visual{position:relative!important;min-height:540px!important;background:radial-gradient(circle at 50% 45%,#fff 0,#fff8e8 52%,#efe6cf 100%)!important}
+.lpldf-page .lpldf-adventurers-simple__visual figure{position:absolute!important;inset:0!important;display:grid!important;place-items:center!important;margin:0!important;padding:28px!important;visibility:hidden!important;opacity:0!important;transform:translateY(10px) scale(.98)!important;transition:opacity .35s ease,transform .35s ease,visibility .35s!important}
+.lpldf-page .lpldf-adventurers-simple__visual figure:first-child{visibility:visible!important;opacity:1!important;transform:none!important}
+.lpldf-page .lpldf-adventurers-simple__visual img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;filter:drop-shadow(0 22px 24px rgba(24,50,71,.16))!important}
+.lpldf-page .lpldf-adventurers-simple__visual .lpldf-adventurer-panel--portrait img{width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center bottom!important;margin:0!important;padding:4px 0 10px!important}
+.lpldf-page .lpldf-adventurers-simple__choices{display:flex!important;flex-direction:column!important;justify-content:center!important;gap:14px!important;padding:clamp(30px,5vw,62px)!important;background:#183247!important}
+.lpldf-page .lpldf-adventurers-simple__choices label{display:flex!important;align-items:center!important;justify-content:space-between!important;min-height:64px!important;padding:15px 22px!important;border:1px solid rgba(255,255,255,.2)!important;border-radius:999px!important;background:rgba(255,255,255,.08)!important;color:#fff!important;font-size:1.08rem!important;font-weight:800!important;cursor:pointer!important;transition:transform .2s ease,background .2s ease,border-color .2s ease!important}
+.lpldf-page .lpldf-adventurers-simple__choices label:after{content:"→";color:#f2c55e}
+.lpldf-page .lpldf-adventurers-simple__choices label:hover{transform:translateX(6px)!important;border-color:#d8a83e!important;background:rgba(255,255,255,.14)!important}
+.lpldf-page .lpldf-adventurers-simple__universe{justify-content:center!important;margin-top:8px!important;border:1px solid #f2c55e!important;background:#f2c55e!important;color:#183247!important}
+.lpldf-page .lpldf-adventurers-simple__universe:hover{background:#fff!important;color:#183247!important}
+.lpldf-page #lpldf-adventurer-fred:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--group,
+.lpldf-page #lpldf-adventurer-lina:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--group,
+.lpldf-page #lpldf-adventurer-tom:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--group,
+.lpldf-page #lpldf-adventurer-milo:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--group{visibility:hidden!important;opacity:0!important}
+.lpldf-page #lpldf-adventurer-fred:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--fred,
+.lpldf-page #lpldf-adventurer-lina:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--lina,
+.lpldf-page #lpldf-adventurer-tom:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--tom,
+.lpldf-page #lpldf-adventurer-milo:checked~.lpldf-adventurers-simple__stage .lpldf-adventurer-panel--milo{visibility:visible!important;opacity:1!important;transform:none!important}
+.lpldf-page #lpldf-adventurer-group:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-group"],
+.lpldf-page #lpldf-adventurer-fred:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-fred"],
+.lpldf-page #lpldf-adventurer-lina:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-lina"],
+.lpldf-page #lpldf-adventurer-tom:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-tom"],
+.lpldf-page #lpldf-adventurer-milo:checked~.lpldf-adventurers-simple__stage label[for="lpldf-adventurer-milo"]{border-color:#f2c55e!important;background:#fff!important;color:#183247!important}
+@media(max-width:760px){.lpldf-page .lpldf-adventurers-simple__stage{grid-template-columns:1fr!important}.lpldf-page .lpldf-adventurers-simple__visual{min-height:470px!important}.lpldf-page .lpldf-adventurers-simple__choices{display:grid!important;grid-template-columns:1fr 1fr!important;padding:24px!important}.lpldf-page .lpldf-adventurers-simple__choices label{min-height:56px!important}.lpldf-page .lpldf-adventurers-simple__universe{grid-column:1/-1!important;width:100%!important}.lpldf-page .lpldf-lightbox{padding:12px!important}}
 </style>
 
 <div class="lpldf-page lpldf-home">
@@ -126,37 +163,30 @@
     <div class="lpldf-section-heading">
       <p class="lpldf-eyebrow">Quatre regards complémentaires</p>
       <h2>Rencontrez les aventuriers</h2>
-      <p>Aucun d’eux ne possède seul la réponse. Choisissez un personnage pour découvrir ce qu’il apporte au groupe.</p>
+      <p>Cliquez sur un prénom pour faire apparaître son portrait.</p>
     </div>
-    <div class="lpldf-adventurers">
+    <div class="lpldf-adventurers-simple">
       <input type="radio" name="lpldf-adventurer" id="lpldf-adventurer-group" checked>
       <input type="radio" name="lpldf-adventurer" id="lpldf-adventurer-fred">
       <input type="radio" name="lpldf-adventurer" id="lpldf-adventurer-lina">
       <input type="radio" name="lpldf-adventurer" id="lpldf-adventurer-tom">
       <input type="radio" name="lpldf-adventurer" id="lpldf-adventurer-milo">
 
-      <div class="lpldf-adventurers__stage">
-        <div class="lpldf-adventurers__visual">
+      <div class="lpldf-adventurers-simple__stage">
+        <div class="lpldf-adventurers-simple__visual">
           <figure class="lpldf-adventurer-panel lpldf-adventurer-panel--group"><img src="/picture/raw/lpldf-quatuor-png-0-xaSk55/format/1024?v=1" alt="Fred, Lina, Tom et Milo dans le village"></figure>
           <figure class="lpldf-adventurer-panel lpldf-adventurer-panel--portrait lpldf-adventurer-panel--fred"><img src="/picture/raw/lpldf-fred-transparent-png-0-4pnzMK/format/1024?v=1" alt="Fred, l’alter ego fictionnel de Frédéric Bastiat"></figure>
           <figure class="lpldf-adventurer-panel lpldf-adventurer-panel--portrait lpldf-adventurer-panel--lina"><img src="/picture/raw/lpldf-lina-transparent-png-0-Hj6y4I/format/1024?v=1" alt="Lina, attentive aux personnes et aux promesses"></figure>
           <figure class="lpldf-adventurer-panel lpldf-adventurer-panel--portrait lpldf-adventurer-panel--tom"><img src="/picture/raw/lpldf-tom-transparent-png-0-M1fq5K/format/1024?v=1" alt="Tom, toujours prêt à agir et à expérimenter"></figure>
           <figure class="lpldf-adventurer-panel lpldf-adventurer-panel--portrait lpldf-adventurer-panel--milo"><img src="/picture/raw/lpldf-milo-transparent-png-0-05LQT7/format/1024?v=1" alt="Milo, observateur patient et précis"></figure>
         </div>
-        <div class="lpldf-adventurers__copy">
-          <div class="lpldf-adventurers__tabs" aria-label="Choisir un aventurier">
-            <label for="lpldf-adventurer-group"><strong>Le groupe</strong><small>Quatre regards</small></label>
-            <label for="lpldf-adventurer-fred"><strong>Fred</strong><small>Questionner</small></label>
-            <label for="lpldf-adventurer-lina"><strong>Lina</strong><small>Écouter</small></label>
-            <label for="lpldf-adventurer-tom"><strong>Tom</strong><small>Expérimenter</small></label>
-            <label for="lpldf-adventurer-milo"><strong>Milo</strong><small>Observer</small></label>
-          </div>
-          <article class="lpldf-adventurer-copy lpldf-adventurer-copy--group"><span>Ensemble</span><h3>Une enquête n’avance jamais avec un seul regard</h3><p>Fred propose une méthode, Tom met les idées à l’épreuve, Lina veille aux personnes et Milo repère l’incohérence que les voix plus rapides avaient laissée passer.</p></article>
-          <article class="lpldf-adventurer-copy lpldf-adventurer-copy--fred"><span>21 ans · Le passeur</span><h3>Fred transforme les grandes idées en expériences</h3><p>Alter ego fictionnel de Frédéric Bastiat, il demande : « Qu’est-ce qu’on ne voit pas ? » Son but n’est pas d’être cité, mais de rendre les enfants capables de chercher sans lui.</p></article>
-          <article class="lpldf-adventurer-copy lpldf-adventurer-copy--lina"><span>8 ans · L’attention</span><h3>Lina remarque la personne oubliée</h3><p>Elle lit les visages, se souvient des promesses et demande qui n’a pas été entendu. Son empathie devient une force lorsqu’elle apprend qu’un refus peut aussi protéger une relation.</p></article>
-          <article class="lpldf-adventurer-copy lpldf-adventurer-copy--tom"><span>9 ans · L’élan</span><h3>Tom veut agir, construire et réparer</h3><p>Il propose souvent la première solution visible et accepte d’en tester les conséquences. Son courage grandit lorsqu’il comprend que réfléchir n’est pas renoncer à agir.</p></article>
-          <article class="lpldf-adventurer-copy lpldf-adventurer-copy--milo"><span>7 ans · La précision</span><h3>Milo voit ce qui manque</h3><p>Il compare les mots, les quantités et les objets déplacés. Après un silence, sa phrase courte touche souvent le cœur du mécanisme : « On peut vérifier ? »</p></article>
-          <a class="lpldf-button" href="/univers">Entrer dans leur univers<span aria-hidden="true">→</span></a>
+        <div class="lpldf-adventurers-simple__choices" aria-label="Choisir un aventurier">
+          <label for="lpldf-adventurer-group">L’équipe</label>
+          <label for="lpldf-adventurer-fred">Fred</label>
+          <label for="lpldf-adventurer-lina">Lina</label>
+          <label for="lpldf-adventurer-tom">Tom</label>
+          <label for="lpldf-adventurer-milo">Milo</label>
+          <a class="lpldf-button lpldf-adventurers-simple__universe" href="/univers">Découvrir leur univers <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
