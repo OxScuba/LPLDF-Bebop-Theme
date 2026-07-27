@@ -27,5 +27,5 @@ noms, usages et slugs d’images employés dans les CMS.
 /picture/raw/SLUG_BEBOP/format/1024?v=1
 ```
 
-Ne pas utiliser le format `2048` sur cette instance : les tests publics ont
-montré que be-BOP renvoie une erreur 404 pour ce format.
+Le format `1024` est la référence validée pour la boutique. Les formats
+supérieurs doivent être testés publiquement avant leur utilisation.

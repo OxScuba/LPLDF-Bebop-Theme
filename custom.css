@@ -1,4 +1,4 @@
-/* LES PETITES LEÇONS DE FRÉDÉRIC — DESIGN SYSTEM V5
+/* LES PETITES LEÇONS DE FRÉDÉRIC — SYSTÈME VISUEL
    be-BOP 885a5ddec4e7f47cec0d52bd0ef9132706350e87
    Chargé depuis les CMS en mode « Use advanced HTML edition ».
    Les composants éditoriaux sont préfixés .lpldf-. */
@@ -79,7 +79,7 @@ body{background:#fff;color:var(--lpldf-text)}
 .lpldf-gallery figcaption{position:absolute;left:18px;bottom:18px;padding:8px 12px;border-radius:999px;background:rgba(24,50,71,.86);color:#fff;font-size:.82rem;backdrop-filter:blur(8px)}
 .lpldf-gallery figcaption span{margin-left:5px;color:#f2c55e}
 
-/* V5.3 — visionneuse grand format CSS, sans script. */
+/* Visionneuse grand format CSS, sans script. */
 .lpldf-lightbox-anchor{position:absolute;width:1px;height:1px;overflow:hidden}
 .lpldf-lightbox{
   position:fixed;
@@ -146,7 +146,7 @@ body{background:#fff;color:var(--lpldf-text)}
 html:has(.lpldf-lightbox:target){overflow:hidden}
 @keyframes lpldf-lightbox-in{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
 
-/* V5.2 — sélecteur des quatre aventuriers, sans JavaScript. */
+/* Sélecteur des aventuriers, sans JavaScript. */
 .lpldf-adventurers{position:relative}
 .lpldf-adventurers>input{
   position:absolute;
@@ -264,7 +264,7 @@ html:has(.lpldf-lightbox:target){overflow:hidden}
 #lpldf-adventurer-tom:checked~.lpldf-adventurers__stage .lpldf-adventurer-copy--tom,
 #lpldf-adventurer-milo:checked~.lpldf-adventurers__stage .lpldf-adventurer-copy--milo{display:block}
 
-/* V5.4 — sélecteur volontairement simple de la page d’accueil */
+/* Sélecteur volontairement simple de la page d’accueil */
 .lpldf-adventurers-simple{position:relative}
 .lpldf-adventurers-simple>input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
 .lpldf-adventurers-simple__stage{
@@ -637,7 +637,7 @@ main.mx-auto.max-w-7xl.px-6.py-10 h2.text-\[22px\]+div{
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lpldf-page *{animation:none!important;transition:none!important}}
 
-/* V5 — FINITIONS GLOBALES DE LA BOUTIQUE be-BOP */
+/* FINITIONS GLOBALES DE LA BOUTIQUE be-BOP */
 ::selection{background:var(--lpldf-gold);color:var(--lpldf-ink)}
 body{
   background:
@@ -769,7 +769,7 @@ footer.footer a:hover{color:#f2c55e!important}
 .lpldf-gallery img{display:block}
 .lpldf-faq details{content-visibility:auto;contain-intrinsic-size:80px}
 
-/* V5.1 — composants 100 % HTML pour éviter le découpage des widgets CMS be-BOP. */
+/* Composants 100 % HTML pour éviter le découpage des widgets CMS be-BOP. */
 .lpldf-pack-card{
   position:relative;
   display:block;

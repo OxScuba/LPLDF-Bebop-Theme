@@ -34,7 +34,7 @@ const shell = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Aperçu LPLDF V5</title>
+  <title>Aperçu de la boutique LPLDF</title>
   <style>${css}</style>
   <style>
     body{margin:0}
@@ -52,5 +52,5 @@ const shell = `<!doctype html>
 </body>
 </html>`;
 
-fs.writeFileSync(path.join(out, 'home-v5.html'), shell);
-console.log(path.join(out, 'home-v5.html'));
+fs.writeFileSync(path.join(out, 'home-preview.html'), shell);
+console.log(path.join(out, 'home-preview.html'));

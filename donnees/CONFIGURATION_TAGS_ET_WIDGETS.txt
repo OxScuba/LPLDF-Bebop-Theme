@@ -28,5 +28,5 @@ SI UNE ZONE TAGPRODUCTS RESTE VIDE
 - vérifier l’orthographe exacte du tag ;
 - vérifier que le produit est publié et visible sur le Web ;
 - vérifier qu’une image principale lui est affectée ;
-- vider le cache de la boutique ou redémarrer l’instance si nécessaire ;
+- vider le cache du navigateur et tester en navigation privée ;
 - tester avec un seul produit avant d’appliquer le tag en masse.

@@ -59,7 +59,7 @@ def main():
         if not content.lstrip().startswith("<style>"):
             fail(f"{path.name}: import CSS absent au début", failures)
         if "custom.css" not in content:
-            fail(f"{path.name}: import CSS V5 absent", failures)
+            fail(f"{path.name}: import du thème CSS absent", failures)
         if '<div class="lpldf-page' not in content:
             fail(f"{path.name}: conteneur .lpldf-page absent", failures)
 
@@ -69,9 +69,9 @@ def main():
     if "CSS LPLDF connecté" in css:
         fail("custom.css: badge de test encore présent", failures)
     if ".lpldf-page" not in css or "header.header" not in css:
-        fail("custom.css: règles principales V5 absentes", failures)
-    if ".lpldf-adventurers" not in css:
-        fail("custom.css: sélecteur des aventuriers V5.2 absent", failures)
+        fail("custom.css: règles principales absentes", failures)
+    if ".lpldf-adventurers-simple" not in css:
+        fail("custom.css: sélecteur des aventuriers absent", failures)
 
     product_cms_files = sorted((ROOT / "produits" / "cms-apres-produit").glob("*.html"))
     if len(product_cms_files) != 11:
@@ -82,9 +82,9 @@ def main():
         parser.feed(content)
         parser.close()
         if "custom.css" not in content:
-            fail(f"{path.name}: import CSS V5 absent", failures)
+            fail(f"{path.name}: import du thème CSS absent", failures)
         if "lpldf-product-extra" not in content:
-            fail(f"{path.name}: bloc produit V5 absent", failures)
+            fail(f"{path.name}: bloc éditorial produit absent", failures)
         if parser.images_without_alt or parser.links_without_href:
             fail(f"{path.name}: attribut HTML obligatoire manquant", failures)
 
@@ -123,7 +123,7 @@ def main():
     print(f"- {len(cms_files)} pages CMS")
     print(f"- {len(product_files)} fiches papier et {len(set(isbns))} ISBN uniques")
     print(f"- {len(product_cms_files)} blocs CMS après produit")
-    print("- CSS V5 équilibré, badge de test absent")
+    print("- CSS équilibré, badge de test absent")
     print("- Aucun placeholder d’image restant hors juridique")
     return 0
 

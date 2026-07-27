@@ -1,0 +1,15 @@
+# Prévisualisations générées localement
+tests/preview/*.html
+
+# Archives de distribution
+*.zip
+
+# Fichiers temporaires
+*.tmp
+*.bak
+
+# Éditeurs et système
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
