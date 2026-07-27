@@ -1,4 +1,10 @@
-/* LES PETITES LEÇONS DE FRÉDÉRIC — DESIGN SYSTEM V5
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aperçu LPLDF V5</title>
+  <style>/* LES PETITES LEÇONS DE FRÉDÉRIC — DESIGN SYSTEM V5
    be-BOP 885a5ddec4e7f47cec0d52bd0ef9132706350e87
    Chargé depuis les CMS en mode « Use advanced HTML edition ».
    Les composants éditoriaux sont préfixés .lpldf-. */
@@ -465,149 +471,6 @@ footer.footer a:hover{color:#f2c55e!important}
 .lpldf-gallery img{display:block}
 .lpldf-faq details{content-visibility:auto;contain-intrinsic-size:80px}
 
-/* V5.1 — composants 100 % HTML pour éviter le découpage des widgets CMS be-BOP. */
-.lpldf-pack-card{
-  position:relative;
-  display:block;
-  padding:30px;
-  overflow:hidden;
-  border:1px solid rgba(24,50,71,.13);
-  border-radius:28px;
-  background:
-    radial-gradient(circle at 90% 8%,rgba(216,168,62,.24),transparent 13rem),
-    #fff;
-  color:var(--lpldf-ink);
-  text-decoration:none!important;
-  box-shadow:0 26px 60px rgba(24,50,71,.14);
-  transform:rotate(1.2deg);
-  transition:transform .3s ease,box-shadow .3s ease;
-}
-.lpldf-pack-card:hover{
-  transform:rotate(0) translateY(-7px);
-  box-shadow:0 34px 70px rgba(24,50,71,.19);
-}
-.lpldf-pack-card img{
-  display:block;
-  width:100%;
-  max-height:510px;
-  margin:auto;
-  object-fit:contain;
-  filter:drop-shadow(0 18px 18px rgba(24,50,71,.18));
-}
-.lpldf-pack-card__badge{
-  position:absolute;
-  z-index:2;
-  top:22px;
-  right:22px;
-  padding:9px 14px;
-  border-radius:999px;
-  background:var(--lpldf-gold);
-  color:var(--lpldf-ink);
-  font-size:.78rem;
-  font-weight:900;
-  letter-spacing:.04em;
-  text-transform:uppercase;
-}
-.lpldf-pack-card__footer{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  margin-top:18px;
-  padding-top:18px;
-  border-top:1px solid var(--lpldf-line);
-}
-.lpldf-pack-card__footer strong{
-  font:700 1.2rem/1.2 Georgia,"Times New Roman",serif;
-}
-.lpldf-pack-card__footer span{font-size:1.25rem;font-weight:900}
-.lpldf-pack-card__footer del{margin-right:7px;color:#77838b;font-size:.9rem;font-weight:600}
-
-.lpldf-book-grid{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:24px;
-  margin-top:40px;
-}
-.lpldf-book-card{
-  position:relative;
-  display:flex;
-  min-width:0;
-  flex-direction:column;
-  overflow:hidden;
-  border:1px solid rgba(24,50,71,.12);
-  border-radius:20px;
-  background:#fff;
-  color:var(--lpldf-ink);
-  text-decoration:none!important;
-  box-shadow:0 12px 34px rgba(24,50,71,.08);
-  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
-}
-.lpldf-book-card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(216,168,62,.7);
-  box-shadow:0 24px 46px rgba(24,50,71,.15);
-}
-.lpldf-book-card>img{
-  display:block;
-  width:100%;
-  aspect-ratio:4/5;
-  padding:24px 20px 8px;
-  object-fit:contain;
-  background:linear-gradient(155deg,#fffdf7,#eef4f1);
-  transition:transform .3s ease;
-}
-.lpldf-book-card:hover>img{transform:scale(1.035)}
-.lpldf-book-card__number{
-  position:absolute;
-  z-index:2;
-  top:14px;
-  left:14px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(24,50,71,.92);
-  color:#fff;
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-}
-.lpldf-book-card__body{
-  display:grid;
-  flex:1;
-  grid-template-rows:auto 1fr auto;
-  gap:8px;
-  padding:18px 20px 20px;
-}
-.lpldf-book-card__body strong{
-  color:var(--lpldf-ink);
-  font:700 1.08rem/1.25 Georgia,"Times New Roman",serif;
-}
-.lpldf-book-card__body small{color:#66747d;font-size:.84rem;line-height:1.4}
-.lpldf-book-card__body b{color:var(--lpldf-rust);font-size:1.08rem}
-
-.lpldf-review-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  align-items:start;
-  gap:24px;
-  margin-top:38px;
-}
-.lpldf-review-card{
-  margin:0;
-  padding:16px;
-  overflow:hidden;
-  border:1px solid var(--lpldf-line);
-  border-radius:20px;
-  background:#fff;
-  box-shadow:0 15px 38px rgba(24,50,71,.09);
-  transition:transform .28s ease,box-shadow .28s ease;
-}
-.lpldf-review-card:nth-child(2){transform:translateY(18px)}
-.lpldf-review-card:hover{transform:translateY(-5px);box-shadow:0 24px 48px rgba(24,50,71,.14)}
-.lpldf-review-card:nth-child(2):hover{transform:translateY(11px)}
-.lpldf-review-card img{display:block;width:100%;height:auto;border-radius:12px}
-
 @keyframes lpldf-page-in{
   from{opacity:0;transform:translateY(10px)}
   to{opacity:1;transform:none}
@@ -620,20 +483,221 @@ footer.footer a:hover{color:#f2c55e!important}
   header.navbar{height:auto!important;min-height:54px}
   main.mx-auto.max-w-7xl .prose{padding:22px}
   footer.footer>div{padding-inline:22px!important}
-  .lpldf-book-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-  .lpldf-book-card>img{padding:18px 12px 5px}
-  .lpldf-book-card__body{padding:14px}
-  .lpldf-book-card__body strong{font-size:.96rem}
-  .lpldf-review-grid{grid-template-columns:1fr}
-  .lpldf-review-card:nth-child(2){transform:none}
-  .lpldf-pack-card{padding:20px;transform:none}
-}
-
-@media(min-width:761px) and (max-width:1050px){
-  .lpldf-book-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 
 @media(prefers-reduced-motion:reduce){
   main.mx-auto.max-w-7xl{animation:none}
   header.header img,header.header nav a:after,header.navbar nav a:after{transition:none}
 }
+</style>
+  <style>
+    body{margin:0}
+    .preview-header{height:84px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;background:#183247;color:#fff;font-family:Outfit,Arial}
+    .preview-header strong{font-size:1.25rem}.preview-header nav{display:flex;gap:24px}
+    .preview-nav{height:58px;padding:0 4vw;display:flex;align-items:center;gap:28px;background:#fff8e8;color:#183247;font-family:Outfit,Arial}
+    .preview-footer{min-height:180px;padding:50px 5vw;background:#183247;color:#fff;font-family:Outfit,Arial}
+  </style>
+</head>
+<body>
+  <header class="preview-header"><strong>Les Petites Leçons de Frédéric</strong><nav><span>Ebooks</span><span>Bitcoin</span><span>Contact</span></nav></header>
+  <div class="preview-nav"><span>Les Livres</span><span>Quel tome choisir ?</span><span>L’Univers</span><span>Parents & éducateurs</span></div>
+  <div class="lpldf-page lpldf-home">
+
+<section class="lpldf-hero">
+  <img class="lpldf-hero__image" src="https://xn--lespetitesleonsdefrdric-89b1db.fr/picture/raw/lpldf-village-panorama-personnages-png-0-om8Yus/format/2048?v=1" alt="" aria-hidden="true">
+  <div class="lpldf-hero__veil"></div>
+  <div class="lpldf-shell lpldf-hero__content">
+    <p class="lpldf-eyebrow">Les Petites Leçons de Frédéric</p>
+    <h1>Des histoires pour apprendre<br>à penser librement</h1>
+    <p class="lpldf-hero__lead">Une saga illustrée pour aider les enfants de 7 à 10 ans à observer, raisonner et comprendre les conséquences de leurs choix.</p>
+    <div class="lpldf-actions"><a class="lpldf-button" href="/product/pack-decouverte-t00-t04">Découvrir le Pack<span aria-hidden="true">→</span></a><a class="lpldf-button lpldf-button--secondary" href="/quel-tome-choisir">Trouver le bon tome<span aria-hidden="true">→</span></a></div>
+  <div class="lpldf-hero__proofs"><span>5 albums</span><span>40 €</span><span>Tome 00 offert</span><span>Dès 7 ans</span></div>
+  </div>
+</section>
+
+<section class="lpldf-strip" aria-label="Les repères de la collection">
+  <div class="lpldf-shell lpldf-strip__grid">
+    <div><strong>38 pages</strong><span>par album</span></div>
+    <div><strong>3 mini-jeux</strong><span>pour prolonger</span></div>
+    <div><strong>11 tomes</strong><span>déjà publiés</span></div>
+    <div><strong>Lecture double</strong><span>enfant et adulte</span></div>
+  </div>
+</section>
+
+<section class="lpldf-section lpldf-section--paper">
+  <div class="lpldf-shell lpldf-split lpldf-split--pack">
+    <div class="lpldf-split__content">
+      <p class="lpldf-eyebrow">Le meilleur point de départ</p>
+      <h2>Cinq albums pour entrer dans le village</h2>
+      <p class="lpldf-lead">Le Pack Découverte réunit le Tome 00 et les quatre premières aventures inspirées de Frédéric Bastiat.</p>
+      <ul class="lpldf-checks">
+        <li>Rencontrer Fred, Lina, Tom et Milo</li>
+        <li>Apprendre à regarder les conséquences invisibles</li>
+        <li>Explorer règles, monnaie, privilèges et responsabilité</li>
+        <li>Économiser 10 € par rapport aux achats séparés</li>
+      </ul>
+      <div class="lpldf-price-line"><span>Valeur 50 €</span><strong>40 €</strong></div>
+      <div class="lpldf-actions"><a class="lpldf-button" href="/product/pack-decouverte-t00-t04">Commencer la collection<span aria-hidden="true">→</span></a><a class="lpldf-button lpldf-button--secondary" href="/la-collection">Voir tous les tomes<span aria-hidden="true">→</span></a></div>
+    </div>
+    <div class="lpldf-split__visual"><div class="lpldf-product-widget lpldf-product-widget--hero"><article class="tagWidget tagWidget-main">
+      <img src="https://xn--lespetitesleonsdefrdric-89b1db.fr/picture/raw/pack-decouverte-bastiat-t00-a-t04-0-Ex6zm4/format/1024?v=1" alt="Pack Découverte">
+      <div style="padding:18px"><h3>Pack Découverte Bastiat — T00 à T04</h3><strong>40 €</strong></div>
+    </article></div></div>
+  </div>
+</section>
+
+<section class="lpldf-section">
+  <div class="lpldf-shell">
+    
+<div class="lpldf-section-heading">
+  <p class="lpldf-eyebrow">Une méthode qui reste une aventure</p>
+  <h2>Observer. Comprendre. Choisir.</h2>
+  <p>Les concepts ne tombent jamais du ciel : ils deviennent visibles dans une situation que les enfants peuvent raconter.</p>
+</div>
+    <div class="lpldf-features">
+      
+<article class="lpldf-feature">
+  <span class="lpldf-feature__icon" aria-hidden="true">◉</span>
+  <h3>Observer</h3>
+  <p>Une scène ordinaire, une promesse séduisante et un détail que personne n’avait encore regardé.</p>
+</article>
+      
+<article class="lpldf-feature">
+  <span class="lpldf-feature__icon" aria-hidden="true">✦</span>
+  <h3>Comprendre</h3>
+  <p>Fred et ses amis suivent les effets d’une décision et rendent visible la conséquence oubliée.</p>
+</article>
+      
+<article class="lpldf-feature">
+  <span class="lpldf-feature__icon" aria-hidden="true">➜</span>
+  <h3>Choisir</h3>
+  <p>L’enfant reformule, discute et imagine comment appliquer son raisonnement dans une autre situation.</p>
+</article>
+    </div>
+  </div>
+</section>
+
+<section class="lpldf-section lpldf-section--ink">
+  <div class="lpldf-shell">
+    
+<div class="lpldf-section-heading">
+  <p class="lpldf-eyebrow">Une question pour ouvrir chaque aventure</p>
+  <h2>Par quoi votre enfant aimerait-il commencer ?</h2>
+  
+</div>
+    <div class="lpldf-question-grid">
+      <a href="/product/t01-les-marchands-de-chandelles"><span>T01</span><strong>Peut-on protéger un métier aux dépens de tous les autres ?</strong><small>Privilège et protectionnisme</small></a>
+      <a href="/product/t02-la-vitre-magique"><span>T02</span><strong>Une destruction crée-t-elle vraiment de la richesse ?</strong><small>Coût d’opportunité</small></a>
+      <a href="/product/t03-la-grande-fabrique-des-regles"><span>T03</span><strong>Une règle écrite est-elle forcément juste ?</strong><small>Loi et contraintes</small></a>
+      <a href="/product/t04-le-mysterieux-argent-de-papier"><span>T04</span><strong>Imprimer des billets rend-il le village plus riche ?</strong><small>Monnaie et inflation</small></a>
+      <a href="/product/t06-le-ruban-de-solidarite"><span>T06</span><strong>Peut-on obliger les autres à être solidaires ?</strong><small>Aide et consentement</small></a>
+      <a href="/product/t07-une-histoire-de-jardin"><span>T07</span><strong>Pourquoi quelque chose nous appartient-il ?</strong><small>Travail et propriété</small></a>
+    </div>
+    <div class="lpldf-center"><a class="lpldf-button" href="/quel-tome-choisir">Comparer les onze tomes<span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+
+<section class="lpldf-section lpldf-section--paper">
+  <div class="lpldf-shell">
+    
+<div class="lpldf-section-heading">
+  <p class="lpldf-eyebrow">Voir avant de choisir</p>
+  <h2>Entrez réellement dans l’album</h2>
+  <p>Une scène pour l’atmosphère, une double page pour la lecture et les mini-jeux pour prolonger l’aventure.</p>
+</div>
+    <div class="lpldf-gallery">
+      <figure class="lpldf-gallery__large"><img src="https://xn--lespetitesleonsdefrdric-89b1db.fr/picture/raw/lpldf-t01-scene-chandellerie-png-0-o19FrL/format/2048?v=1" alt="Scène de la chandellerie du Tome 01"><figcaption>L’univers illustré</figcaption></figure>
+      <figure><img src="https://xn--lespetitesleonsdefrdric-89b1db.fr/picture/raw/lpldf-t01-extrait-double-page-02-png-0-VkwZ5C/format/2048?v=1" alt="Double page intérieure du Tome 01"><figcaption>De vraies doubles pages</figcaption></figure>
+      <figure><img src="https://xn--lespetitesleonsdefrdric-89b1db.fr/picture/raw/lpldf-t01-mini-jeux-png-0-e6jfDT/format/2048?v=1" alt="Les trois mini-jeux du Tome 01"><figcaption>Observer, jouer, restituer</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="lpldf-section">
+  <div class="lpldf-shell lpldf-character-intro">
+    <div class="lpldf-character-intro__image"><img src="https://xn--lespetitesleonsdefrdric-89b1db.fr/picture/raw/lpldf-quatuor-png-0-xaSk55/format/1024?v=1" alt="Fred, Lina, Tom et Milo"></div>
+    <div>
+      <p class="lpldf-eyebrow">Quatre regards complémentaires</p>
+      <h2>Rencontrez les jeunes enquêteurs</h2>
+      <p class="lpldf-lead">Aucun héros ne possède seul la réponse. Fred questionne, Lina écoute, Tom teste et Milo remarque le détail oublié.</p>
+      <div class="lpldf-mini-characters">
+        <span><strong>Fred</strong> questionne</span><span><strong>Lina</strong> nuance</span><span><strong>Tom</strong> expérimente</span><span><strong>Milo</strong> observe</span>
+      </div>
+      <a class="lpldf-button" href="/univers">Découvrir leur univers<span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="lpldf-section lpldf-section--sage">
+  <div class="lpldf-shell">
+    
+<div class="lpldf-section-heading">
+  <p class="lpldf-eyebrow">La collection publiée</p>
+  <h2>Onze albums, plusieurs chemins de lecture</h2>
+  <p>Choisissez un thème précis ou suivez les saisons dans l’ordre.</p>
+</div>
+    <div class="lpldf-tag-zone"><article class="tagWidget tagWidget-main"><div style="min-height:230px;background:linear-gradient(145deg,#fff8e8,#fff);display:grid;place-items:center;color:#183247;font:700 2rem Georgia">T00</div><div style="padding:18px"><h3>Tome 00</h3><strong>10 €</strong></div></article><article class="tagWidget tagWidget-main"><div style="min-height:230px;background:linear-gradient(145deg,#fff8e8,#fff);display:grid;place-items:center;color:#183247;font:700 2rem Georgia">T01</div><div style="padding:18px"><h3>Tome 01</h3><strong>10 €</strong></div></article><article class="tagWidget tagWidget-main"><div style="min-height:230px;background:linear-gradient(145deg,#fff8e8,#fff);display:grid;place-items:center;color:#183247;font:700 2rem Georgia">T02</div><div style="padding:18px"><h3>Tome 02</h3><strong>10 €</strong></div></article><article class="tagWidget tagWidget-main"><div style="min-height:230px;background:linear-gradient(145deg,#fff8e8,#fff);display:grid;place-items:center;color:#183247;font:700 2rem Georgia">T03</div><div style="padding:18px"><h3>Tome 03</h3><strong>10 €</strong></div></article><article class="tagWidget tagWidget-main"><div style="min-height:230px;background:linear-gradient(145deg,#fff8e8,#fff);display:grid;place-items:center;color:#183247;font:700 2rem Georgia">T04</div><div style="padding:18px"><h3>Tome 04</h3><strong>10 €</strong></div></article><article class="tagWidget tagWidget-main"><div style="min-height:230px;background:linear-gradient(145deg,#fff8e8,#fff);display:grid;place-items:center;color:#183247;font:700 2rem Georgia">T05</div><div style="padding:18px"><h3>Tome 05</h3><strong>10 €</strong></div></article><article class="tagWidget tagWidget-main"><div style="min-height:230px;background:linear-gradient(145deg,#fff8e8,#fff);display:grid;place-items:center;color:#183247;font:700 2rem Georgia">T06</div><div style="padding:18px"><h3>Tome 06</h3><strong>10 €</strong></div></article><article class="tagWidget tagWidget-main"><div style="min-height:230px;background:linear-gradient(145deg,#fff8e8,#fff);display:grid;place-items:center;color:#183247;font:700 2rem Georgia">T07</div><div style="padding:18px"><h3>Tome 07</h3><strong>10 €</strong></div></article></div>
+    <div class="lpldf-center"><a class="lpldf-button" href="/la-collection">Explorer toute la collection<span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+
+<section class="lpldf-section">
+  <div class="lpldf-shell lpldf-parent-callout">
+    <div>
+      <p class="lpldf-eyebrow">Deux niveaux de lecture</p>
+      <h2>Une aventure pour l’enfant, une conversation pour l’adulte</h2>
+      <p>L’enfant n’a pas à réciter un vocabulaire savant. Il raconte ce qui s’est passé, identifie ce qui avait été oublié et explique pourquoi les personnages ont changé de décision.</p>
+      <a class="lpldf-button" href="/parents-educateurs">Comprendre la démarche<span aria-hidden="true">→</span></a>
+    </div>
+    <blockquote>« Le raisonnement compte davantage que la réponse parfaite. »</blockquote>
+  </div>
+</section>
+
+<section class="lpldf-section lpldf-section--paper">
+  <div class="lpldf-shell">
+    
+<div class="lpldf-section-heading">
+  <p class="lpldf-eyebrow">Ils ont ouvert le carnet</p>
+  <h2>Ce qu’en disent les lecteurs</h2>
+  
+</div>
+    <div class="lpldf-slider-frame"><blockquote style="margin:0;padding:34px;font:italic 1.25rem Georgia;color:#183247">« Une collection qui donne envie aux enfants de poser des questions. »</blockquote></div>
+    <div class="lpldf-center"><a class="lpldf-button lpldf-button--secondary" href="/avis-des-lecteurs">Lire tous les avis<span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+
+<section class="lpldf-reassurance">
+  <div class="lpldf-shell lpldf-reassurance__grid">
+    
+<article class="lpldf-feature">
+  <span class="lpldf-feature__icon" aria-hidden="true">📦</span>
+  <h3>Expédition suivie</h3>
+  <p>Préparation soignée et livraison via Mondial Relay.</p>
+</article>
+    
+<article class="lpldf-feature">
+  <span class="lpldf-feature__icon" aria-hidden="true">₿</span>
+  <h3>Euros ou Bitcoin</h3>
+  <p>Les moyens disponibles apparaissent clairement au paiement.</p>
+</article>
+    
+<article class="lpldf-feature">
+  <span class="lpldf-feature__icon" aria-hidden="true">✉</span>
+  <h3>Une réponse humaine</h3>
+  <p>Une question ? Écrivez directement à l’auteur.</p>
+</article>
+  </div>
+</section>
+
+<section class="lpldf-final-cta">
+  <div class="lpldf-shell">
+    <p class="lpldf-eyebrow">La première page est une question</p>
+    <h2>Quelle sera la vôtre ?</h2>
+    <div class="lpldf-actions lpldf-actions--center"><a class="lpldf-button" href="/product/pack-decouverte-t00-t04">Découvrir le Pack<span aria-hidden="true">→</span></a><a class="lpldf-button lpldf-button--secondary" href="/quel-tome-choisir">Choisir un tome<span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+</div>
+
+  <footer class="preview-footer"><strong>Les Petites Leçons de Frédéric</strong><p>Des histoires pour apprendre à penser librement.</p></footer>
+</body>
+</html>

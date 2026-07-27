@@ -6,7 +6,7 @@ Dans le CMS concerné, retirer uniquement :
 
 ```html
 <style>
-@import url("https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css?v=5.0.0");
+@import url("https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css");
 </style>
 ```
 

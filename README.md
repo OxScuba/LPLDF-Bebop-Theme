@@ -12,7 +12,7 @@ modifié. Le thème est chargé depuis chaque page CMS grâce au mode
 
 ```html
 <style>
-@import url("https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css?v=5.0.0");
+@import url("https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css");
 </style>
 ```
 

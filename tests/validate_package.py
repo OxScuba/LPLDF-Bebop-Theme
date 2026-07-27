@@ -56,7 +56,7 @@ def main():
             fail(f"{path.name}: placeholder d’image non remplacé", failures)
         if not content.lstrip().startswith("<style>"):
             fail(f"{path.name}: import CSS absent au début", failures)
-        if "custom.css?v=5.0.0" not in content:
+        if "custom.css" not in content:
             fail(f"{path.name}: import CSS V5 absent", failures)
         if '<div class="lpldf-page' not in content:
             fail(f"{path.name}: conteneur .lpldf-page absent", failures)
@@ -77,7 +77,7 @@ def main():
         parser = FragmentParser()
         parser.feed(content)
         parser.close()
-        if "custom.css?v=5.0.0" not in content:
+        if "custom.css" not in content:
             fail(f"{path.name}: import CSS V5 absent", failures)
         if "lpldf-product-extra" not in content:
             fail(f"{path.name}: bloc produit V5 absent", failures)

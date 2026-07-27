@@ -71,7 +71,7 @@ for (const file of files) {
   const tome = info.find((item) => item.startsWith('Tome :'))?.replace('Tome :', '').trim() ?? '';
 
   const html = `<style>
-@import url("https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css?v=5.0.0");
+@import url("https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css");
 </style>
 
 <section class="lpldf-product-extra" aria-label="En savoir plus sur ${esc(title)}">
