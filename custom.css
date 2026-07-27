@@ -41,7 +41,7 @@ body{background:#fff;color:var(--lpldf-text)}
 .lpldf-button--secondary{background:transparent;color:var(--lpldf-ink)!important;border-color:rgba(24,50,71,.35);box-shadow:none}
 .lpldf-section--ink .lpldf-button--secondary,.lpldf-hero .lpldf-button--secondary,.lpldf-final-cta .lpldf-button--secondary{color:#fff!important;border-color:rgba(255,255,255,.55)}
 .lpldf-hero{position:relative;min-height:min(760px,82vh);display:flex;align-items:center;background:var(--lpldf-ink);isolation:isolate}
-.lpldf-hero__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-3;animation:lpldf-hero-in 1.2s ease both}
+.lpldf-hero__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--lpldf-hero-focus-desktop,center) center;z-index:-3;animation:lpldf-hero-in 1.2s ease both}
 .lpldf-hero__veil{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(15,39,54,.96) 0%,rgba(15,39,54,.83) 40%,rgba(15,39,54,.28) 76%,rgba(15,39,54,.18) 100%)}
 .lpldf-hero:after{content:"";position:absolute;inset:auto 0 0;height:140px;z-index:-1;background:linear-gradient(transparent,rgba(15,39,54,.42))}
 .lpldf-hero__content{padding-block:100px;color:#fff;animation:lpldf-rise .8s .15s ease both}
@@ -607,7 +607,7 @@ footer{border-top:4px solid var(--lpldf-gold)}
 }
 @media(max-width:760px){
   .lpldf-page{margin:-1.25rem calc(50% - 50vw)}.lpldf-shell{width:min(100% - 30px,1160px)}
-  .lpldf-section{padding:68px 0}.lpldf-hero{min-height:690px;align-items:flex-end}.lpldf-hero__image{object-position:62% center}.lpldf-hero__veil{background:linear-gradient(0deg,rgba(15,39,54,.98),rgba(15,39,54,.72) 72%,rgba(15,39,54,.38))}
+  .lpldf-section{padding:68px 0}.lpldf-hero{min-height:690px;align-items:flex-end}.lpldf-hero__image{object-position:var(--lpldf-hero-focus-mobile,62%) center}.lpldf-hero__veil{background:linear-gradient(0deg,rgba(15,39,54,.98),rgba(15,39,54,.72) 72%,rgba(15,39,54,.38))}
   .lpldf-hero__content{padding-block:90px 55px}.lpldf-hero__content h1 br{display:none}.lpldf-actions{align-items:stretch}.lpldf-button{width:100%}
   .lpldf-strip__grid{grid-template-columns:1fr 1fr}.lpldf-strip__grid div:nth-child(2){border-right:0}.lpldf-strip__grid div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}
   .lpldf-split,.lpldf-character-intro,.lpldf-parent-callout,.lpldf-columns,.lpldf-guides,.lpldf-bastiat,.lpldf-choice-feature,.lpldf-reading-path,.lpldf-contact-grid,.lpldf-hash-explain{grid-template-columns:1fr}
@@ -1879,3 +1879,4 @@ footer.footer a:hover{color:#f2c55e!important}
   }
   #collection-packs{--lpldf-band-depth:1320px}
 }
+
