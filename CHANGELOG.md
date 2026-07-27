@@ -2,6 +2,21 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.4.3
+
+- suppression du collage de couvertures du Pack Saison 2, que be-BOP pouvait extraire de son conteneur ;
+- nouveau bandeau Saison 2 entièrement éditorial, sans image parasite ;
+- nouveau bloc de prix « Album papier » pour les Tomes 00 et 10 ;
+- amélioration de l’espacement entre le prix et le bouton sur ordinateur et mobile.
+
+## 5.4.2
+
+- remplacement des shortcodes produit de la page Collection par des cartes HTML stables ;
+- suppression des conteneurs blancs et du second rendu natif des produits ;
+- ajout d’une navigation interne entre les saisons ;
+- création d’un bandeau visuel pour le Pack Saison 2 ;
+- amélioration de la grille sur ordinateur, tablette et mobile.
+
 ## 5.4.1
 
 - ajout du retour vers le visuel de l’équipe dans le sélecteur des aventuriers ;

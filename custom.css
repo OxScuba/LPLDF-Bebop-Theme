@@ -952,20 +952,27 @@ footer.footer a:hover{color:#f2c55e!important}
   font:700 clamp(1.8rem,3vw,2.7rem)/1.1 Georgia,"Times New Roman",serif;
 }
 .lpldf-collection-feature p{color:var(--lpldf-muted)}
-.lpldf-collection-feature__footer{
-  display:flex;
+.lpldf-collection-feature__actions{
+  display:grid;
+  grid-template-columns:auto minmax(190px,auto);
   align-items:center;
   justify-content:space-between;
-  gap:22px;
+  gap:24px;
   margin-top:28px;
-  padding-top:22px;
-  border-top:1px solid var(--lpldf-line);
+  padding:16px 18px;
+  border:1px solid var(--lpldf-line);
+  border-radius:18px;
+  background-color:#fff;
+  box-shadow:0 10px 24px rgba(24,50,71,.07);
 }
-.lpldf-collection-feature__footer>strong{color:var(--lpldf-terracotta);font-size:1.45rem}
+.lpldf-collection-feature__price{display:flex;flex-direction:column;gap:4px;line-height:1}
+.lpldf-collection-feature__price small{color:var(--lpldf-muted);font-size:.68rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.lpldf-collection-feature__price strong{color:var(--lpldf-terracotta);font-size:1.55rem}
+.lpldf-collection-feature__actions .lpldf-button{justify-self:end;white-space:nowrap}
 .lpldf-book-grid--five{grid-template-columns:repeat(5,minmax(0,1fr))}
 .lpldf-season-pack{
   display:grid;
-  grid-template-columns:minmax(350px,1fr) minmax(330px,.9fr);
+  grid-template-columns:minmax(0,1fr) minmax(230px,.42fr);
   align-items:center;
   gap:clamp(26px,5vw,62px);
   margin-top:50px;
@@ -973,37 +980,33 @@ footer.footer a:hover{color:#f2c55e!important}
   overflow:hidden;
   border:1px solid rgba(216,168,62,.55);
   border-radius:26px;
-  background:linear-gradient(135deg,var(--lpldf-ink),#28556d);
+  background-color:#183247!important;
+  background-image:linear-gradient(135deg,#183247,#28556d)!important;
   color:#fff!important;
   text-decoration:none!important;
   box-shadow:0 22px 52px rgba(24,50,71,.18);
   transition:transform .28s ease,box-shadow .28s ease;
 }
 .lpldf-season-pack:hover{transform:translateY(-6px);box-shadow:0 32px 66px rgba(24,50,71,.25)}
-.lpldf-season-pack__covers{
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  min-height:230px;
-}
-.lpldf-season-pack__covers img{
-  width:23%;
-  max-height:245px;
-  margin-left:-5%;
-  border-radius:7px;
-  object-fit:contain;
-  box-shadow:0 12px 24px rgba(0,0,0,.24);
-  transform:rotate(-4deg);
-}
-.lpldf-season-pack__covers img:first-child{margin-left:0}
-.lpldf-season-pack__covers img:nth-child(even){transform:translateY(-8px) rotate(3deg)}
-.lpldf-season-pack__covers img:nth-child(3){position:relative;z-index:2;transform:translateY(-14px)}
 .lpldf-season-pack__content{display:flex;flex-direction:column;align-items:flex-start}
 .lpldf-season-pack__content>small{color:#f2c55e;font-size:.76rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
-.lpldf-season-pack__content>strong{margin:12px 0 20px;color:#fff;font:700 clamp(1.65rem,3vw,2.45rem)/1.12 Georgia,"Times New Roman",serif}
-.lpldf-season-pack__content>span{font-size:1.35rem;font-weight:900}
-.lpldf-season-pack__content del{margin-right:7px;color:#b9c8cf;font-size:.9rem}
-.lpldf-season-pack__content b{display:block;margin-top:18px;color:#f2c55e;font-size:.92rem}
+.lpldf-season-pack__content>strong{margin:12px 0 16px;color:#fff;font:700 clamp(1.65rem,3vw,2.45rem)/1.12 Georgia,"Times New Roman",serif}
+.lpldf-season-pack__content>p{max-width:650px;margin:0;color:#d9e3e8}
+.lpldf-season-pack__offer{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:22px;
+  background-color:rgba(255,255,255,.09);
+}
+.lpldf-season-pack__offer>small{color:#d9e3e8;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.lpldf-season-pack__offer>span{display:flex;align-items:baseline;gap:9px}
+.lpldf-season-pack__offer del{color:#b9c8cf;font-size:.9rem}
+.lpldf-season-pack__offer strong{color:#fff;font-size:1.8rem}
+.lpldf-season-pack__offer>b{margin-top:4px;color:#f2c55e;font-size:.9rem}
 
 .lpldf-review-grid{
   display:grid;
@@ -1047,10 +1050,11 @@ footer.footer a:hover{color:#f2c55e!important}
   .lpldf-collection-feature,.lpldf-collection-feature--reverse{grid-template-columns:1fr;padding:24px}
   .lpldf-collection-feature--reverse>img{order:0}
   .lpldf-collection-feature>img{max-height:430px}
-  .lpldf-collection-feature__footer{align-items:stretch;flex-direction:column}
+  .lpldf-collection-feature__actions{grid-template-columns:1fr;align-items:stretch}
+  .lpldf-collection-feature__actions .lpldf-button{justify-self:stretch}
   .lpldf-season-pack{grid-template-columns:1fr;padding:28px 20px}
-  .lpldf-season-pack__covers{min-height:190px}
-  .lpldf-season-pack__content{align-items:center;text-align:center}
+  .lpldf-season-pack__content{align-items:flex-start;text-align:left}
+  .lpldf-season-pack__offer{width:100%;box-sizing:border-box}
   .lpldf-review-grid{grid-template-columns:1fr}
   .lpldf-review-card:nth-child(2){transform:none}
   .lpldf-pack-card{padding:20px;transform:none}
