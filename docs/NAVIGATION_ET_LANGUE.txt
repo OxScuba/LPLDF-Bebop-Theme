@@ -1,0 +1,32 @@
+LANGUE
+- Français : activé et langue par défaut.
+- Désactiver temporairement en, es-sv, nl, it, de et pt tant que les contenus ne sont pas traduits.
+- Vérifier en navigation privée que "Acheter maintenant", "Ajouter au panier", "Quantité" et les mentions de TVA apparaissent en français.
+
+NAVIGATION PRINCIPALE — ORDRE CONSEILLÉ
+Accueil | /
+Les livres | /la-collection
+Quel tome choisir ? | /quel-tome-choisir
+L’univers | /univers
+Parents | /parents-educateurs
+À propos | /a-propos
+
+LIENS SECONDAIRES OU FOOTER
+Ebooks | /ebooks
+Bitcoin | /bitcoin
+Avis | /avis-des-lecteurs
+Contact | /contact
+Livraison & retours | /livraison-et-retours
+FAQ | /faq
+Preuves d’ancrage | /timechain
+Soutenir | /soutenir
+
+THÈME
+- Mode visiteur par défaut : Light.
+- Désactiver le sélecteur jour/nuit si vous ne comptez pas entretenir deux palettes.
+- CMS pleine largeur : OUI.
+- Contenu CMS additionnel mobile : affiché.
+- Zoom des images produit : à conserver pour les doubles pages.
+
+FISCALITÉ ET LIBELLÉS
+La fiche publique affiche actuellement "VAT excluded". Configurez la TVA et la langue avant mise en ligne. Vérifiez le régime fiscal réellement applicable à vos ventes de livres.

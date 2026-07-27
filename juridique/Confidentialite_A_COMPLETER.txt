@@ -1,0 +1,16 @@
+<h1>Politique de confidentialité</h1>
+<p>Dernière mise à jour : À COMPLÉTER</p>
+<h2>Données traitées</h2>
+<p>Selon votre utilisation du site, nous pouvons traiter les informations nécessaires aux commandes, paiements, livraisons, demandes de contact, avis et obligations comptables.</p>
+<h2>Finalités et bases légales</h2>
+<p>Les traitements servent notamment à exécuter les commandes, répondre aux demandes, respecter les obligations légales, prévenir les abus et, avec votre accord lorsque nécessaire, mesurer l’audience ou envoyer des communications.</p>
+<h2>Destinataires</h2>
+<p>Les données sont accessibles uniquement aux personnes et prestataires nécessaires à la finalité concernée : paiement, hébergement, livraison, comptabilité ou assistance.</p>
+<h2>Durées de conservation</h2>
+<p>Les durées exactes doivent être complétées selon chaque catégorie de données et vos obligations légales : À COMPLÉTER.</p>
+<h2>Vos droits</h2>
+<p>Vous pouvez demander l’accès, la rectification, l’effacement, la limitation ou la portabilité de vos données, ou vous opposer à certains traitements, dans les conditions prévues par la réglementation.</p>
+<h2>Contact</h2>
+<p>Pour exercer vos droits : <a href="mailto:contact@lpldf.fr">contact@lpldf.fr</a>. Vous pouvez également saisir la CNIL.</p>
+<h2>Cookies et mesure d’audience</h2>
+<p>Décrire ici les outils réellement utilisés, leur configuration, les traceurs déposés et les modalités de consentement ou d’opposition : À COMPLÉTER APRÈS CONFIGURATION.</p>

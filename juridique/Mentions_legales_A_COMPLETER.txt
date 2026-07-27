@@ -1,0 +1,8 @@
+<h1>Mentions légales</h1>
+<p>Éditeur du site : À COMPLÉTER<br>Statut : À COMPLÉTER<br>Adresse : À COMPLÉTER<br>SIREN/SIRET : À COMPLÉTER<br>Email : contact@lpldf.fr<br>Responsable de publication : À COMPLÉTER</p>
+<h2>Hébergement</h2>
+<p>Nom, raison sociale, adresse et coordonnées de l’hébergeur : À COMPLÉTER.</p>
+<h2>Propriété intellectuelle</h2>
+<p>Les textes, illustrations, couvertures, marques, logos et contenus présents sur ce site sont protégés. Toute reproduction ou diffusion non autorisée est interdite.</p>
+<h2>Contact</h2>
+<p>Pour toute question : <a href="mailto:contact@lpldf.fr">contact@lpldf.fr</a>.</p>

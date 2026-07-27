@@ -1,0 +1,32 @@
+OBJECTIF
+Faire fonctionner [TagProducts=livre-papier] et [TagProducts=ebook] sans afficher une zone vide.
+
+RÈGLES
+1. Les tags sont en minuscules, sans accent et sans espace.
+2. Un produit peut et doit recevoir plusieurs tags.
+3. "livre-papier", "Livre-papier" et "livre papier" sont trois valeurs différentes : ne créer que la première.
+4. Les slugs produit et les tags sont deux notions différentes.
+
+PROCÉDURE CONSEILLÉE
+1. Admin > Merch > Products > Bulk.
+2. Sélectionner les onze livres papier.
+3. Ajouter "livre-papier" à tous.
+4. Ajouter "saison-1" à T01-T04, "saison-2" à T05-T09 et "saison-3" à T10.
+5. Ajouter le numéro propre à chaque tome : t00, t01, etc.
+6. Répéter pour les ebooks avec le tag "ebook".
+7. Ajouter "pack" aux trois offres groupées.
+8. Ouvrir l’accueil dans une fenêtre privée et vérifier la section "La collection publiée".
+
+WIDGETS ATTENDUS
+- Slider "avis-lecteurs", autoplay conseillé : 7000 ms.
+- Slider "avis-x", autoplay conseillé : 7000 ms.
+- Slider "avis-amazon", autoplay conseillé : 7000 ms.
+- Form "avis-lecteur".
+- Form "contact-uH4RAu".
+
+SI UNE ZONE TAGPRODUCTS RESTE VIDE
+- vérifier l’orthographe exacte du tag ;
+- vérifier que le produit est publié et visible sur le Web ;
+- vérifier qu’une image principale lui est affectée ;
+- vider le cache de la boutique ou redémarrer l’instance si nécessaire ;
+- tester avec un seul produit avant d’appliquer le tag en masse.

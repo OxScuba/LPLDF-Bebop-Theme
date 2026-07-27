@@ -1,0 +1,29 @@
+AVERTISSEMENT
+Ce modèle doit être complété avec votre identité juridique, vos moyens de paiement, votre médiateur de la consommation, votre régime fiscal et vos modalités exactes. Faites-le vérifier avant publication.
+
+<h1>Conditions générales de vente</h1>
+<p>Dernière mise à jour : À COMPLÉTER</p>
+<h2>1. Identité du vendeur</h2>
+<p>Nom ou raison sociale : À COMPLÉTER<br>Statut juridique : À COMPLÉTER<br>Adresse : À COMPLÉTER<br>SIREN/SIRET : À COMPLÉTER<br>Email : contact@lpldf.fr<br>Numéro de TVA, le cas échéant : À COMPLÉTER</p>
+<h2>2. Produits</h2>
+<p>Les caractéristiques essentielles, le prix et la disponibilité de chaque livre ou contenu numérique sont présentés sur sa fiche produit.</p>
+<h2>3. Prix</h2>
+<p>Les prix sont indiqués en euros, toutes taxes comprises selon le régime applicable. Les frais de livraison sont indiqués avant validation définitive de la commande.</p>
+<h2>4. Commande et paiement</h2>
+<p>La commande devient ferme après validation et paiement selon l’un des moyens proposés. Le bouton final de commande doit indiquer clairement l’obligation de paiement.</p>
+<h2>5. Livraison</h2>
+<p>Les livres physiques sont expédiés selon les modalités indiquées sur la page Livraison et retours. Le vendeur reste responsable de la bonne exécution de la commande dans les conditions prévues par la loi.</p>
+<h2>6. Rétractation — produits physiques</h2>
+<p>Le consommateur dispose en principe de 14 jours à compter du lendemain de la réception pour notifier sa décision de se rétracter. Les frais directs de retour sont : À COMPLÉTER.</p>
+<h2>7. Contenus numériques</h2>
+<p>L’accès immédiat à un contenu numérique avant la fin du délai de rétractation nécessite l’accord exprès du consommateur et sa reconnaissance de la perte de son droit de rétractation, lorsque les conditions légales sont réunies.</p>
+<h2>8. Garanties légales</h2>
+<p>Les produits bénéficient des garanties légales applicables, notamment la garantie légale de conformité et la garantie contre les vices cachés.</p>
+<h2>9. Réclamations</h2>
+<p>Toute réclamation peut être adressée à contact@lpldf.fr avec le numéro de commande et les informations utiles.</p>
+<h2>10. Médiation</h2>
+<p>Médiateur de la consommation : NOM, ADRESSE ET SITE À COMPLÉTER.</p>
+<h2>11. Droit applicable</h2>
+<p>Les présentes conditions sont soumises au droit français, sous réserve des règles protectrices impératives applicables au consommateur.</p>
+<h2>Formulaire type de rétractation</h2>
+<p>À l’attention de : IDENTITÉ ET ADRESSE À COMPLÉTER.<br>Je vous notifie par la présente ma rétractation du contrat portant sur : ______<br>Commandé le / reçu le : ______<br>Nom du consommateur : ______<br>Adresse : ______<br>Date et signature : ______</p>

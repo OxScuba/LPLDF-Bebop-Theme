@@ -1,0 +1,32 @@
+ORDINATEUR
+[ ] Hero lisible à 1366 × 768 : titre, promesse et au moins un bouton visibles.
+[ ] Aucun débordement horizontal.
+[ ] Les cartes produit s’affichent dans les zones TagProducts.
+[ ] Les boutons ont un état au survol.
+[ ] La page Univers affiche quatre cartes de personnages.
+[ ] Les descriptions produit restent lisibles.
+
+MOBILE
+[ ] Tester 360 × 800 et 390 × 844.
+[ ] Le titre du hero ne masque pas les personnages.
+[ ] Les boutons occupent toute la largeur.
+[ ] Les grilles passent sur une colonne.
+[ ] Les QR codes et images restent dans l’écran.
+[ ] Les fiches produit affichent image puis achat sans espace excessif.
+
+ACCESSIBILITÉ
+[ ] Contraste suffisant.
+[ ] Un seul h1 par page CMS.
+[ ] Tous les liens sont utilisables au clavier.
+[ ] Les FAQ utilisent details/summary.
+[ ] Les animations sont neutralisées avec prefers-reduced-motion.
+[ ] Les images informatives ont un texte alternatif.
+
+COMMERCE
+[ ] Français sélectionné par défaut.
+[ ] TVA et prix correctement configurés.
+[ ] Stock et quantité maximale vérifiés.
+[ ] Paiement euros testé.
+[ ] Paiement Bitcoin testé si activé.
+[ ] Livraison Mondial Relay testée.
+[ ] Emails de commande reçus.

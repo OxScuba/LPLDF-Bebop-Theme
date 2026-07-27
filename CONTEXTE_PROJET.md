@@ -2,92 +2,73 @@
 
 ## Projet
 
-Boutique officielle de la saga jeunesse illustrée
-**Les Petites Leçons de Frédéric**.
+Boutique officielle de la saga jeunesse illustrée **Les Petites Leçons de
+Frédéric**.
 
-Domaine :
-
-https://xn--lespetitesleonsdefrdric-89b1db.fr/
+- Boutique : https://xn--lespetitesleonsdefrdric-89b1db.fr/
+- Atelier et canon : https://github.com/OxScuba/Atelier-LPLDF
+- Thème : https://github.com/OxScuba/LPLDF-Bebop-Theme
 
 ## Objectif
 
-Transformer le rendu générique de be-BOP en véritable boutique éditoriale :
+Transformer le rendu générique de be-BOP en boutique éditoriale immersive :
 
-- univers chaleureux et livresque ;
-- bleu encre, crème papier, or chandelle, vert sauge ;
-- héros immersifs ;
-- cartes et grilles ;
-- animations discrètes ;
-- fiches produit améliorées ;
-- responsive mobile ;
+- bleu encre, crème papier, or chandelle et vert sauge ;
+- village et personnages au centre de l’expérience ;
+- hiérarchie visuelle claire et parcours d’achat raccourci ;
+- vraies grilles de produits, cartes, extraits et mini-jeux ;
+- fiches produit à double niveau de lecture ;
+- animations discrètes et accessibilité mobile ;
 - Pack Découverte mis en avant.
 
-## Installation
+## Contrainte technique résolue
 
-Version be-BOP utilisée :
+Version be-BOP :
 
-885a5ddec4e7f47cec0d52bd0ef9132706350e87
+`885a5ddec4e7f47cec0d52bd0ef9132706350e87`
 
-La feuille globale est hébergée avec GitHub Pages :
+La source `src/app.html` se trouve dans un dossier partagé par deux instances
+be-BOP. Elle ne doit pas être modifiée.
+
+GitHub Pages sert la feuille :
 
 https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css
 
-Dans `src/app.html`, la boutique doit charger :
+Chaque CMS charge cette feuille depuis le mode **Use advanced HTML edition**.
+Le test public `test-css-lpldf` a confirmé que cette méthode fonctionne. En
+mode TinyMCE normal, be-BOP supprime la balise `<style>`.
 
-<link rel="stylesheet" href="https://oxscuba.github.io/LPLDF-Bebop-Theme/custom.css" />
+## Données commerciales retenues
 
-## Hébergement
+- tomes papier T00 à T10 : 10 € chacun ;
+- Pack Découverte T00–T04 : 40 € ;
+- Pack Liberté et responsabilité T05–T09 : 45 € ;
+- Collection T00–T10 : 90 € ;
+- albums carrés d’environ 15 × 15 cm ;
+- 38 pages ;
+- lecture dès 7 ans.
 
-be-BOP est installé sur la machine d’un ami.
+## Images disponibles
 
-La machine héberge également une autre instance be-BOP.
+- panoramas du village avec et sans personnages ;
+- quatuor et portraits de Fred, Lina, Tom et Milo ;
+- scène et mini-jeux T00 ;
+- scène, trois doubles pages et mini-jeux T01 à T04 ;
+- trois doubles pages T05 ;
+- couvertures des produits ;
+- QR Lightning.
 
-Toute intervention serveur doit impérativement identifier l’instance reliée au
-domaine Les Petites Leçons de Frédéric et ne reconstruire que cette instance.
+Les images manquantes de T06 à T10 ne doivent pas être promises dans les pages
+avant leur création.
 
-Scuba Wizard administre surtout la boutique depuis l’interface web de be-BOP.
+## Règle de reprise
 
-## Contenu et style
-
-- Le contenu des pages reste modifiable dans l’administration be-BOP.
-- `custom.css` contient seulement l’habillage global.
-- Les CMS emploient des classes préfixées par `lpldf-`.
-- Aucun secret, mot de passe ou fichier `.env` ne doit être publié ici.
-
-## Produits
-
-- T00 à T10
-- 10 € par livre papier
-- Pack Découverte T00–T04 : 40 €
-- Pack T05–T09 : 45 €
-- Collection T00–T10 : 90 €
-
-## Tags principaux
-
-- `livre-papier`
-- `ebook`
-- `pack`
-- `hors-serie`
-- `saison-1`
-- `saison-2`
-- `saison-3`
-- `collection-complete`
-- `t00` à `t10`
-
-## Sources éditoriales
-
-Canon et atelier d’écriture :
-
-https://github.com/OxScuba/Atelier-LPLDF
-
-## Reprise du projet dans une future conversation
-
-Demander à l’assistant de lire :
+Avant toute modification, lire :
 
 1. `README.md`
 2. `CONTEXTE_PROJET.md`
 3. `CHANGELOG.md`
-4. `docs/`
-5. les CMS concernés
+4. `docs/INSTALLATION_PAS_A_PAS.md`
+5. le CMS ou la fiche produit concernée
 
-avant de proposer ou modifier le thème.
+Ne jamais publier de secret, accès SSH, donnée client ou fichier `.env`.
