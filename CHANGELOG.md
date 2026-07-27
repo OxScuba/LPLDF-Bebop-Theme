@@ -2,6 +2,16 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.8
+
+- transformation des dix carrés de choix T01 à T10 en ouvertures de fiches ;
+- ajout de la couverture, du récit, des notions et de la phrase pivot de chaque tome ;
+- ajout d’un bouton explicite vers la fiche produit, sans quitter la page avant ce choix ;
+- navigation circulaire entre le tome précédent et le tome suivant ;
+- fermeture vers la section « Ce que votre enfant aimerait comprendre » ;
+- adaptation des fiches au téléphone et aux petits écrans ;
+- validation automatique des dix fiches, couvertures, boutons et navigations.
+
 ## 5.7.2
 
 - audit de toutes les pages CMS, blocs produit, blocs pack et aperçus HTML ;

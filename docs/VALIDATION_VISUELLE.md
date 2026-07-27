@@ -22,6 +22,13 @@
   l’histoire » à l’écran ;
 - la fermeture d’une image agrandie sur Home conserve la section « Entrez
   réellement dans l’album » à l’écran ;
+- les dix carrés de « Quel tome choisir » ouvrent une fiche sans quitter la page ;
+- chaque fiche de tome affiche sa couverture, son résumé, ses notions, sa phrase
+  pivot et un bouton produit explicite ;
+- les commandes précédent et suivant permettent de comparer les dix tomes sans
+  fermer la fiche ;
+- la fermeture d’une fiche conserve la section « Ce que votre enfant aimerait
+  comprendre » à l’écran ;
 - le footer présente les liens essentiels.
 
 ## Téléphone
@@ -35,6 +42,8 @@
 - les cartes Collection conservent le prix en sats et le bouton panier ;
 - les fiches de guides tiennent dans la largeur de l’écran, leur texte défile et
   leur bouton de fermeture reste accessible ;
+- les fiches du comparateur tiennent dans la largeur, la couverture reste entière
+  et le texte défile sans débordement horizontal ;
 - la fiche produit ne conserve aucun panneau `sticky`.
 
 ## Accessibilité

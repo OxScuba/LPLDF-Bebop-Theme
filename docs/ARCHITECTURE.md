@@ -46,6 +46,11 @@ Les visionneuses des fiches produit utilisent `product-gallery.js`. Elles ne
 modifient ni l’ancre de l’adresse ni la position de défilement et rendent le
 focus à la grande image après fermeture.
 
+La page `Quel_tome_choisir.html` utilise le même contrat pour ses fiches T01 à
+T10. Les carrés de la grille ouvrent une fenêtre interne ; seul le bouton
+« Découvrir le Tome » conduit à la fiche produit. La navigation précédent /
+suivant relie les dix fenêtres en boucle.
+
 ## Mise à jour d’une page
 
 1. Modifier le fichier dans `cms/`.

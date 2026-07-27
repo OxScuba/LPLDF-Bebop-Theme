@@ -134,6 +134,7 @@ Pour le détail, consulter :
 - [architecture des contenus](docs/ARCHITECTURE.md) ;
 - [installation de la Collection marchande](docs/INSTALLER_COLLECTION_V5.6.md) ;
 - [installation des guides interactifs de l’Univers](docs/INSTALLER_GUIDES_UNIVERS_V5.7.md) ;
+- [installation du comparateur interactif des tomes](docs/INSTALLER_COMPARATEUR_TOMES_V5.8.md) ;
 - [cartographie éditoriale des guides](donnees/GUIDES_DE_LA_SAGA.md) ;
 - [configuration du thème natif](docs/THEME_NATIF_BEBOP.md) ;
 - [plan des CMS](docs/PLAN_CMS.md).
@@ -151,6 +152,7 @@ Le script de validation contrôle notamment :
 - les 11 blocs éditoriaux après produit ;
 - les 2 blocs éditoriaux après pack ;
 - les 16 bulles, fiches et portraits des guides de la page Univers ;
+- les 10 fiches du comparateur, leurs couvertures et leurs boutons produit ;
 - toutes les fenêtres CSS, leurs liens d’ouverture et leur retour vers la
   section d’origine ;
 - l’absence de déplacement programmé dans les visionneuses produit ;

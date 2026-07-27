@@ -176,6 +176,78 @@ def main():
     if "lpldf-native-collection-marker" not in collection:
         fail("La_Collection.html: marqueur du catalogue natif absent", failures)
 
+    chooser = (ROOT / "cms" / "Quel_tome_choisir.html").read_text(encoding="utf-8")
+    expected_choice_ids = {
+        f"lpldf-choice-t{number:02d}" for number in range(1, 11)
+    }
+    choice_ids = set(re.findall(
+        r'id="(lpldf-choice-t(?:0[1-9]|10))"',
+        chooser,
+    ))
+    if choice_ids != expected_choice_ids:
+        fail(
+            "Quel_tome_choisir.html: les dix fiches T01 à T10 sont requises",
+            failures,
+        )
+    if 'id="lpldf-choice-return"' not in chooser:
+        fail(
+            "Quel_tome_choisir.html: ancre de retour du comparateur absente",
+            failures,
+        )
+    choice_grid = chooser.partition('<div class="lpldf-choice-grid">')[2].partition("</div>")[0]
+    if any(
+        f'href="/product/t{number:02d}-' in choice_grid
+        for number in range(1, 11)
+    ):
+        fail(
+            "Quel_tome_choisir.html: les carrés doivent ouvrir les fiches, "
+            "pas les produits",
+            failures,
+        )
+    expected_choice_products = {
+        "/product/t01-les-marchands-de-chandelles",
+        "/product/t02-la-vitre-magique",
+        "/product/t03-la-grande-fabrique-des-regles",
+        "/product/t04-le-mysterieux-argent-de-papier",
+        "/product/t05-la-boussole-invisible",
+        "/product/t06-le-ruban-de-solidarite",
+        "/product/t07-une-histoire-de-jardin",
+        "/product/t08-le-pont-du-consentement",
+        "/product/t09-quand-le-gardien-oublie-sa-mission",
+        "/product/t10-la-foire-aux-mille-prix",
+    }
+    for product_href in expected_choice_products:
+        if chooser.count(f'href="{product_href}"') != 1:
+            fail(
+                "Quel_tome_choisir.html: bouton produit manquant ou dupliqué "
+                f"pour {product_href}",
+                failures,
+            )
+    expected_choice_images = {
+        "t01-les-marchands-de-chandelles-0-lNLeCL",
+        "t02-la-vitre-magique-0-VEHUVy",
+        "t03-la-grande-fabrique-des-regles-0-g3lM2t",
+        "t04-le-mysterieux-argent-de-papier-0-RG5sJY",
+        "t05-la-boussole-invisible-0-KCAt4p",
+        "t06-le-ruban-de-solidarite-0-rGyO9J",
+        "t07-une-histoire-de-jardin-0-080Rmw",
+        "t08-le-pont-du-consentement-0-56DBHs",
+        "t09-quand-le-gardien-oublie-sa-mission-0-Dsdqyt",
+        "t10-la-foire-aux-mille-prix-0-xxkk0e",
+    }
+    chooser_images = set(re.findall(r"/picture/raw/([^/]+)/format/", chooser))
+    if not expected_choice_images.issubset(chooser_images):
+        fail(
+            "Quel_tome_choisir.html: une ou plusieurs couvertures manquent",
+            failures,
+        )
+    if chooser.count('class="lpldf-tome-lightbox__nav"') != 10:
+        fail(
+            "Quel_tome_choisir.html: chaque fiche doit permettre de comparer "
+            "le tome précédent et le suivant",
+            failures,
+        )
+
     universe = (ROOT / "cms" / "Univers.html").read_text(encoding="utf-8")
     guide_links = re.findall(r'href="#(lpldf-guide-[^"]+)"', universe)
     guide_ids = re.findall(r'id="(lpldf-guide-[^"]+)"', universe)
@@ -243,6 +315,8 @@ def main():
         fail("custom.css: sélecteur de la structure réelle be-BOP absent", failures)
     if ".lpldf-guide-lightbox" not in css or ".lpldf-guide-list a" not in css:
         fail("custom.css: présentation interactive des guides absente", failures)
+    if ".lpldf-tome-lightbox" not in css or ".lpldf-choice-grid" not in css:
+        fail("custom.css: présentation du comparateur de tomes absente", failures)
     if ".lpldf-return-anchor" not in css:
         fail("custom.css: positionnement des retours de visionneuse absent", failures)
 
@@ -353,6 +427,7 @@ def main():
     print(f"- {len(product_cms_files)} blocs CMS après produit")
     print(f"- {len(pack_cms_files)} blocs CMS après pack")
     print(f"- {len(guide_ids)} fiches de guides reliées à leurs bulles")
+    print(f"- {len(choice_ids)} fiches de tomes reliées au comparateur")
     print(f"- {css_window_count} fenêtres CSS contrôlées avec leur retour de section")
     print("- CSS équilibré, badge de test absent")
     print("- Aucun placeholder d’image restant hors juridique")
