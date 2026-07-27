@@ -24,6 +24,28 @@
 - Les fichiers de `juridique/` sont des modèles, pas des textes réputés validés.
 - Les prévisualisations générées ne sont pas versionnées.
 
+## Fenêtres, fiches et images agrandies
+
+Une fenêtre CSS ouverte avec une adresse de type `#identifiant` doit respecter
+la structure suivante :
+
+- la section d’origine porte un identifiant et la classe
+  `.lpldf-return-anchor` ;
+- la croix et l’arrière-plan de la fenêtre renvoient vers cette section ;
+- la section de retour apparaît dans le HTML avant la fenêtre ;
+- aucun `<span>` de fermeture ne doit être ajouté après les cartes ou les
+  images ;
+- chaque fenêtre possède une croix, un arrière-plan fermant et un lien
+  d’ouverture.
+
+Le script `tests/validate_package.py` applique cette règle à tous les CMS, blocs
+produit, blocs pack et aperçus HTML. Une nouvelle fenêtre mal structurée fait
+échouer la validation avant publication.
+
+Les visionneuses des fiches produit utilisent `product-gallery.js`. Elles ne
+modifient ni l’ancre de l’adresse ni la position de défilement et rendent le
+focus à la grande image après fermeture.
+
 ## Mise à jour d’une page
 
 1. Modifier le fichier dans `cms/`.

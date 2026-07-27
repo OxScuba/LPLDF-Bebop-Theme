@@ -18,6 +18,10 @@
   suite dans la page ;
 - chaque fiche de guide peut défiler indépendamment et se ferme par la croix ou
   par un clic sur l’arrière-plan ;
+- la fermeture d’un guide conserve la section « Les grandes idées entrent dans
+  l’histoire » à l’écran ;
+- la fermeture d’une image agrandie sur Home conserve la section « Entrez
+  réellement dans l’album » à l’écran ;
 - le footer présente les liens essentiels.
 
 ## Téléphone

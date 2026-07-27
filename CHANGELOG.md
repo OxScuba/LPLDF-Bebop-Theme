@@ -2,6 +2,24 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.7.2
+
+- audit de toutes les pages CMS, blocs produit, blocs pack et aperçus HTML ;
+- confirmation que les visionneuses produit JavaScript préservent déjà le défilement ;
+- régénération de l’aperçu Home avec le nouveau retour de section ;
+- remplacement des contrôles ponctuels par une règle générique applicable à
+  toutes les futures fenêtres CSS ;
+- refus automatique d’une fermeture visant un marqueur placé après son contenu ;
+- refus automatique d’une fenêtre privée de croix ou d’arrière-plan fermant.
+
+## 5.7.1
+
+- déplacement des ancres de fermeture au début de leur section d’origine ;
+- retour à « Entrez réellement dans l’album » après fermeture d’une image ;
+- retour à « Les grandes idées entrent dans l’histoire » après fermeture d’un guide ;
+- même protection appliquée aux fiches des quatre aventuriers dans Univers ;
+- ajout d’une marge d’ancrage pour ne pas masquer le titre sous la navigation.
+
 ## 5.7
 
 - transformation des seize noms de guides en bulles interactives ;

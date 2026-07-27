@@ -13,25 +13,112 @@ class FragmentParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.ids = []
+        self.elements_by_id = {}
+        self.fragment_links = []
+        self.lightboxes = []
         self.images_without_alt = []
         self.links_without_href = []
 
     def handle_starttag(self, tag, attrs):
         values = dict(attrs)
+        classes = set(values.get("class", "").split())
         if "id" in values:
             self.ids.append(values["id"])
+            self.elements_by_id[values["id"]] = {
+                "tag": tag,
+                "classes": classes,
+                "position": self.getpos(),
+            }
         if tag == "img" and "alt" not in values:
             self.images_without_alt.append(self.getpos())
         if tag == "a" and not values.get("href"):
             self.links_without_href.append(self.getpos())
+        if tag == "a" and values.get("href", "").startswith("#"):
+            self.fragment_links.append({
+                "target": values["href"][1:],
+                "classes": classes,
+                "position": self.getpos(),
+            })
+        if "lpldf-lightbox" in classes:
+            self.lightboxes.append({
+                "id": values.get("id"),
+                "position": self.getpos(),
+            })
 
 
 def fail(message, failures):
     failures.append(message)
 
 
+def validate_internal_windows(path, parser, failures):
+    """Contrôle générique des fenêtres CSS reposant sur :target."""
+    duplicates = sorted({item for item in parser.ids if parser.ids.count(item) > 1})
+    if duplicates:
+        fail(f"{path}: identifiants dupliqués {duplicates}", failures)
+
+    for link in parser.fragment_links:
+        if not link["target"]:
+            continue
+        target = parser.elements_by_id.get(link["target"])
+        if target is None:
+            fail(f"{path}: lien interne sans cible #{link['target']}", failures)
+            continue
+        closing_link = {
+            "lpldf-lightbox__close",
+            "lpldf-lightbox__backdrop",
+        } & link["classes"]
+        if not closing_link:
+            continue
+        if target["tag"] != "section" or "lpldf-return-anchor" not in target["classes"]:
+            fail(
+                f"{path}: la fermeture vers #{link['target']} doit viser "
+                "une section .lpldf-return-anchor",
+                failures,
+            )
+        if target["position"] >= link["position"]:
+            fail(f"{path}: l’ancre #{link['target']} doit précéder la fenêtre", failures)
+
+    close_links = sum(
+        "lpldf-lightbox__close" in link["classes"]
+        for link in parser.fragment_links
+    )
+    backdrop_links = sum(
+        "lpldf-lightbox__backdrop" in link["classes"]
+        for link in parser.fragment_links
+    )
+    if parser.lightboxes and close_links != len(parser.lightboxes):
+        fail(
+            f"{path}: {len(parser.lightboxes)} fenêtre(s) mais "
+            f"{close_links} bouton(s) de fermeture",
+            failures,
+        )
+    if parser.lightboxes and backdrop_links != len(parser.lightboxes):
+        fail(
+            f"{path}: {len(parser.lightboxes)} fenêtre(s) mais "
+            f"{backdrop_links} arrière-plan(s) fermant(s)",
+            failures,
+        )
+    opener_targets = {
+        link["target"]
+        for link in parser.fragment_links
+        if not (
+            {"lpldf-lightbox__close", "lpldf-lightbox__backdrop"}
+            & link["classes"]
+        )
+    }
+    for lightbox in parser.lightboxes:
+        if not lightbox["id"]:
+            fail(f"{path}: fenêtre CSS sans identifiant", failures)
+        elif lightbox["id"] not in opener_targets:
+            fail(
+                f"{path}: fenêtre #{lightbox['id']} sans lien d’ouverture",
+                failures,
+            )
+
+
 def main():
     failures = []
+    css_window_count = 0
     cms_files = sorted((ROOT / "cms").glob("*.html"))
     if len(cms_files) != 14:
         fail(f"14 CMS attendus, {len(cms_files)} trouvés", failures)
@@ -52,6 +139,8 @@ def main():
             fail(f"{path.name}: image sans attribut alt", failures)
         if parser.links_without_href:
             fail(f"{path.name}: lien sans href", failures)
+        validate_internal_windows(path.name, parser, failures)
+        css_window_count += len(parser.lightboxes)
         if "REMPLACER_IMG_" in content:
             fail(f"{path.name}: placeholder d’image non remplacé", failures)
         if "/format/2048" in content:
@@ -131,7 +220,6 @@ def main():
             "Univers.html: image(s) de guide absente(s) " + ", ".join(missing_guide_images),
             failures,
         )
-
     image_registry = (ROOT / "donnees" / "REGISTRE_IMAGES_BEBOP.csv").read_text(
         encoding="utf-8"
     )
@@ -155,6 +243,8 @@ def main():
         fail("custom.css: sélecteur de la structure réelle be-BOP absent", failures)
     if ".lpldf-guide-lightbox" not in css or ".lpldf-guide-list a" not in css:
         fail("custom.css: présentation interactive des guides absente", failures)
+    if ".lpldf-return-anchor" not in css:
+        fail("custom.css: positionnement des retours de visionneuse absent", failures)
 
     gallery_script = ROOT / "product-gallery.js"
     if not gallery_script.exists():
@@ -165,6 +255,12 @@ def main():
             fail("product-gallery.js: branchement sur la grande image absent", failures)
         if "a[href" in gallery_js or "ring-2" in gallery_js:
             fail("product-gallery.js: les miniatures ne doivent pas ouvrir la visionneuse", failures)
+        if (
+            "location.hash" in gallery_js
+            or "window.location" in gallery_js
+            or "scrollIntoView" in gallery_js
+        ):
+            fail("product-gallery.js: la fermeture ne doit pas déplacer la page", failures)
 
     product_cms_files = sorted((ROOT / "produits" / "cms-apres-produit").glob("*.html"))
     if len(product_cms_files) != 11:
@@ -184,6 +280,7 @@ def main():
             fail(f"{path.name}: format physique 21 × 21 cm absent", failures)
         if parser.images_without_alt or parser.links_without_href:
             fail(f"{path.name}: attribut HTML obligatoire manquant", failures)
+        validate_internal_windows(str(path.relative_to(ROOT)), parser, failures)
 
     pack_cms_files = sorted((ROOT / "produits" / "cms-apres-pack").glob("*.html"))
     if len(pack_cms_files) != 2:
@@ -203,6 +300,15 @@ def main():
             fail(f"{path.name}: format physique 21 × 21 cm absent", failures)
         if parser.images_without_alt or parser.links_without_href:
             fail(f"{path.name}: attribut HTML obligatoire manquant", failures)
+        validate_internal_windows(str(path.relative_to(ROOT)), parser, failures)
+
+    preview_files = sorted((ROOT / "tests" / "preview").glob("*.html"))
+    for path in preview_files:
+        content = path.read_text(encoding="utf-8")
+        parser = FragmentParser()
+        parser.feed(content)
+        parser.close()
+        validate_internal_windows(str(path.relative_to(ROOT)), parser, failures)
 
     product_files = sorted((ROOT / "produits" / "papier").glob("*.txt"))
     if len(product_files) != 11:
@@ -247,6 +353,7 @@ def main():
     print(f"- {len(product_cms_files)} blocs CMS après produit")
     print(f"- {len(pack_cms_files)} blocs CMS après pack")
     print(f"- {len(guide_ids)} fiches de guides reliées à leurs bulles")
+    print(f"- {css_window_count} fenêtres CSS contrôlées avec leur retour de section")
     print("- CSS équilibré, badge de test absent")
     print("- Aucun placeholder d’image restant hors juridique")
     return 0

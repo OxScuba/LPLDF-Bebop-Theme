@@ -81,6 +81,7 @@ body{background:#fff;color:var(--lpldf-text)}
 
 /* Visionneuse grand format CSS, sans script. */
 .lpldf-lightbox-anchor{position:absolute;width:1px;height:1px;overflow:hidden}
+.lpldf-return-anchor{scroll-margin-top:110px}
 .lpldf-lightbox{
   position:fixed;
   z-index:9999;

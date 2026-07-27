@@ -151,6 +151,9 @@ Le script de validation contrôle notamment :
 - les 11 blocs éditoriaux après produit ;
 - les 2 blocs éditoriaux après pack ;
 - les 16 bulles, fiches et portraits des guides de la page Univers ;
+- toutes les fenêtres CSS, leurs liens d’ouverture et leur retour vers la
+  section d’origine ;
+- l’absence de déplacement programmé dans les visionneuses produit ;
 - l’équilibre syntaxique du CSS.
 
 ```bash
