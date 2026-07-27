@@ -2,6 +2,16 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.6
+
+- remplacement des cartes éditoriales de la Collection par treize widgets produit natifs be-BOP ;
+- uniformisation des deux packs, des saisons et des tomes seuls dans un même langage visuel ;
+- affichage des deux visuels de packs, dont le Pack Liberté et responsabilité ;
+- affichage dynamique du prix en sats et du prix en euros ;
+- ajout au panier possible directement depuis la page Collection ;
+- conservation d’un accès explicite à chaque fiche produit ;
+- adaptation de la variante native `img-4` aux écrans mobiles.
+
 ## 5.5
 
 - création de deux CMS enrichis pour les Packs Découverte et Saison 2 ;

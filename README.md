@@ -132,7 +132,7 @@ Pour le détail, consulter :
 - [remplacement du dépôt local](docs/REMPLACER_DEPOT_LOCAL.md) ;
 - [maintenance du dépôt](docs/MAINTENANCE.md) ;
 - [architecture des contenus](docs/ARCHITECTURE.md) ;
-- [installation des CMS des packs](docs/INSTALLER_PACKS_V5.5.md) ;
+- [installation de la Collection marchande](docs/INSTALLER_COLLECTION_V5.6.md) ;
 - [configuration du thème natif](docs/THEME_NATIF_BEBOP.md) ;
 - [plan des CMS](docs/PLAN_CMS.md).
 

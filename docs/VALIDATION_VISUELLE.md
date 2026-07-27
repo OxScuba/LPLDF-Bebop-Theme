@@ -8,8 +8,11 @@
 - les textes restent lisibles sur l’image ;
 - les cartes ont des espacements réguliers ;
 - les widgets ne s’affichent pas sous forme de codes entre crochets ;
-- les onze produits forment une grille et non une colonne interminable ;
-- les boutons produit restent accessibles ;
+- les treize produits (onze tomes et deux packs) forment une grille cohérente ;
+- chaque carte affiche l’image, le prix en sats, le prix en euros et le vrai bouton
+  d’ajout au panier be-BOP ;
+- chaque carte permet aussi d’ouvrir sa fiche produit ;
+- le Pack Liberté et responsabilité affiche bien son propre visuel ;
 - le footer présente les liens essentiels.
 
 ## Téléphone
@@ -20,6 +23,7 @@
 - aucune image n’est coupée de manière gênante ;
 - les doubles pages restent lisibles au zoom ;
 - les grilles passent sur une colonne ;
+- les cartes Collection conservent le prix en sats et le bouton panier ;
 - la fiche produit ne conserve aucun panneau `sticky`.
 
 ## Accessibilité

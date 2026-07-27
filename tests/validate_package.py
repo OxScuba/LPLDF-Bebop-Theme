@@ -64,21 +64,28 @@ def main():
             fail(f"{path.name}: conteneur .lpldf-page absent", failures)
 
     collection = (ROOT / "cms" / "La_Collection.html").read_text(encoding="utf-8")
-    if "[Product=" in collection or "lpldf-product-widget" in collection:
+    product_shortcodes = re.findall(
+        r"\[Product=([^?\]]+)\?display=([^\]]+)\]",
+        collection,
+    )
+    if len(product_shortcodes) != 13:
         fail(
-            "La_Collection.html: shortcode produit incompatible avec le HTML avancé",
+            f"La_Collection.html: 13 widgets natifs attendus, "
+            f"{len(product_shortcodes)} trouvé(s)",
             failures,
         )
-    if collection.count("lpldf-book-card") < 10:
-        fail("La_Collection.html: cartes de livres incomplètes", failures)
-    if "lpldf-season-pack__covers" in collection:
-        fail("La_Collection.html: ancien collage instable du Pack Saison 2", failures)
-    if collection.count("lpldf-pack-choice") < 2:
-        fail("La_Collection.html: les deux packs ne sont pas présentés", failures)
-    if collection.count("/product/pack-saison-2-t05-t09") != 1:
-        fail("La_Collection.html: lien unique vers le Pack Saison 2 attendu", failures)
-    if collection.count("lpldf-collection-feature__actions") != 2:
-        fail("La_Collection.html: blocs de prix des Tomes 00 et 10 incomplets", failures)
+    if len({slug for slug, _ in product_shortcodes}) != len(product_shortcodes):
+        fail("La_Collection.html: widget produit dupliqué", failures)
+    if any(display != "img-4" for _, display in product_shortcodes):
+        fail("La_Collection.html: tous les widgets doivent utiliser img-4", failures)
+    expected_packs = {
+        "pack-decouverte-t00-t04",
+        "pack-saison-2-t05-t09",
+    }
+    if not expected_packs.issubset({slug for slug, _ in product_shortcodes}):
+        fail("La_Collection.html: un des deux packs est absent", failures)
+    if "lpldf-native-collection-marker" not in collection:
+        fail("La_Collection.html: marqueur du catalogue natif absent", failures)
 
     css = (ROOT / "custom.css").read_text(encoding="utf-8")
     if css.count("{") != css.count("}"):
@@ -91,6 +98,8 @@ def main():
         fail("custom.css: sélecteur des aventuriers absent", failures)
     if ".lpldf-image-lightbox" not in css:
         fail("custom.css: visionneuse des images produit absente", failures)
+    if ".lpldf-native-collection-marker" not in css or ".tagWidget.tagWidget-main" not in css:
+        fail("custom.css: présentation du catalogue natif absente", failures)
 
     gallery_script = ROOT / "product-gallery.js"
     if not gallery_script.exists():
