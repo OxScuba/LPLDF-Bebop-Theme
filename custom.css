@@ -1880,3 +1880,252 @@ footer.footer a:hover{color:#f2c55e!important}
   #collection-packs{--lpldf-band-depth:1320px}
 }
 
+
+/* ==========================================================================
+   PANIER ET CHECKOUT — continuité visuelle de la boutique
+   Ciblage structurel limité aux pages natives be-BOP concernées.
+   ========================================================================== */
+
+main.mx-auto.max-w-7xl:has(input[name="quantity"]),
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]){
+  width:min(100% - 32px,1240px)!important;
+  margin-block:clamp(28px,5vw,68px)!important;
+  padding:0!important;
+  color:var(--lpldf-text);
+  animation:lpldf-page-in .55s ease both;
+}
+
+/* Panier */
+main.mx-auto.max-w-7xl:has(input[name="quantity"])>div.w-full{
+  padding:clamp(22px,4vw,42px)!important;
+  border:1px solid rgba(24,50,71,.13)!important;
+  border-radius:28px!important;
+  background:
+    radial-gradient(circle at 96% 0,rgba(216,168,62,.16),transparent 18rem),
+    #fff!important;
+  box-shadow:0 24px 60px rgba(24,50,71,.12)!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="quantity"]) h1,
+main.mx-auto.max-w-7xl:has(input[name="quantity"]) h2{
+  color:var(--lpldf-ink)!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="quantity"]) a[href^="/product/"]{
+  color:var(--lpldf-ink)!important;
+  font-weight:800;
+}
+main.mx-auto.max-w-7xl:has(input[name="quantity"]) a[href^="/product/"] img{
+  border-radius:16px!important;
+  box-shadow:0 12px 30px rgba(24,50,71,.14);
+}
+main.mx-auto.max-w-7xl:has(input[name="quantity"]) input[name="quantity"]:not([type="hidden"]){
+  min-height:46px;
+  border-block:1px solid rgba(24,50,71,.2)!important;
+  background:#fff!important;
+  color:var(--lpldf-ink)!important;
+  font-weight:900;
+}
+main.mx-auto.max-w-7xl:has(input[name="quantity"]) button[aria-label*="quantité"],
+main.mx-auto.max-w-7xl:has(input[name="quantity"]) button[title*="quantité"]{
+  min-width:46px;
+  border-color:rgba(24,50,71,.18)!important;
+  background:var(--lpldf-cream)!important;
+  color:var(--lpldf-ink)!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="quantity"]) button[type="submit"]{
+  min-height:54px;
+  padding-inline:28px!important;
+  border-radius:999px!important;
+  font-weight:900!important;
+}
+
+/* Checkout : structure générale */
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full{
+  align-items:start;
+  gap:clamp(22px,3vw,38px)!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>form{
+  gap:24px!important;
+  padding:clamp(24px,4vw,48px)!important;
+  border:1px solid rgba(24,50,71,.13);
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 100% 0,rgba(223,232,220,.65),transparent 20rem),
+    #fff;
+  box-shadow:0 24px 60px rgba(24,50,71,.11);
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) .page-title{
+  position:relative;
+  margin:0 0 6px!important;
+  padding-bottom:24px;
+  color:var(--lpldf-ink)!important;
+  font:700 clamp(2.25rem,4.5vw,3.8rem)/1.05 Georgia,"Times New Roman",serif!important;
+  letter-spacing:-.035em;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) .page-title:after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:84px;
+  height:4px;
+  border-radius:99px;
+  background:var(--lpldf-gold);
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>form>section{
+  gap:16px!important;
+  padding:clamp(20px,3vw,30px)!important;
+  border:1px solid var(--lpldf-line);
+  border-radius:22px;
+  background:rgba(255,248,232,.48);
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>form>section>h2{
+  margin:0 0 4px!important;
+  color:var(--lpldf-ink)!important;
+  font:700 clamp(1.45rem,2.4vw,2rem)/1.2 Georgia,"Times New Roman",serif!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) .form-label{
+  gap:8px!important;
+  color:var(--lpldf-ink)!important;
+  font-size:.9rem!important;
+  font-weight:800!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) .form-input{
+  width:100%;
+  min-height:50px;
+  padding:11px 14px!important;
+  border:1px solid rgba(24,50,71,.22)!important;
+  border-radius:12px!important;
+  background:#fff!important;
+  color:var(--lpldf-text)!important;
+  box-shadow:0 2px 0 rgba(24,50,71,.03);
+  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) textarea.form-input{
+  min-height:120px;
+  resize:vertical;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) .form-input:focus{
+  outline:0!important;
+  border-color:var(--lpldf-gold)!important;
+  box-shadow:0 0 0 4px rgba(216,168,62,.18)!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) .checkbox-label{
+  display:flex!important;
+  align-items:flex-start!important;
+  gap:11px!important;
+  color:var(--lpldf-text)!important;
+  font-size:.94rem!important;
+  line-height:1.45!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) .form-checkbox{
+  width:19px!important;
+  height:19px!important;
+  margin-top:1px!important;
+  flex:0 0 19px;
+  accent-color:var(--lpldf-gold);
+  border-color:rgba(24,50,71,.35)!important;
+  border-radius:5px!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) form p{
+  color:var(--lpldf-muted);
+  line-height:1.6;
+}
+
+/* Encarts Notifications et Note */
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) form article{
+  border:1px solid rgba(24,50,71,.13)!important;
+  border-radius:16px!important;
+  background:#fff!important;
+  box-shadow:0 8px 24px rgba(24,50,71,.05);
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) form article>div:first-child{
+  padding:13px 16px!important;
+  border-color:rgba(24,50,71,.1)!important;
+  background:var(--lpldf-ink)!important;
+  color:#fff!important;
+  font-weight:800!important;
+}
+
+/* Récapitulatif de commande */
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full{
+  margin-top:0!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full>article{
+  top:24px!important;
+  gap:12px!important;
+  padding:24px!important;
+  border:1px solid rgba(24,50,71,.14)!important;
+  border-radius:24px!important;
+  background:
+    radial-gradient(circle at 100% 0,rgba(216,168,62,.2),transparent 14rem),
+    var(--lpldf-cream)!important;
+  box-shadow:0 24px 55px rgba(24,50,71,.14)!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full>article a{
+  color:var(--lpldf-ink)!important;
+  font-weight:800;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full>article img{
+  border-radius:12px!important;
+  box-shadow:0 8px 20px rgba(24,50,71,.12);
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full>article h3{
+  color:var(--lpldf-ink)!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full>article input[type="submit"]{
+  width:100%;
+  min-height:58px;
+  margin:8px 0 0!important;
+  border:0!important;
+  border-radius:999px!important;
+  background:var(--lpldf-gold)!important;
+  color:var(--lpldf-ink)!important;
+  font-size:1.12rem!important;
+  font-weight:900!important;
+  box-shadow:0 13px 28px rgba(216,168,62,.3)!important;
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+}
+main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full>article input[type="submit"]:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.04);
+  box-shadow:0 17px 34px rgba(216,168,62,.36)!important;
+}
+
+@media(max-width:1024px){
+  main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full{
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>form,
+  main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full{
+    width:100%!important;
+  }
+  main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-full>article{
+    position:static!important;
+  }
+}
+@media(max-width:640px){
+  main.mx-auto.max-w-7xl:has(input[name="quantity"]),
+  main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]){
+    width:min(100% - 20px,1240px)!important;
+    margin-block:20px 42px!important;
+  }
+  main.mx-auto.max-w-7xl:has(input[name="quantity"])>div.w-full,
+  main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>form{
+    padding:20px!important;
+    border-radius:20px!important;
+  }
+  main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>form>section{
+    padding:18px!important;
+    border-radius:16px!important;
+  }
+  main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"]) .page-title{
+    font-size:2.25rem!important;
+  }
+}
+
