@@ -2,6 +2,15 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.4.5
+
+- suppression du débordement horizontal créé par le bloc CMS produit ;
+- rétablissement de la largeur normale de l’en-tête, du contenu et du pied de page sur mobile ;
+- élargissement maîtrisé du conteneur CMS à l’intérieur de la fiche native ;
+- transformation de la sélection d’image native be-BOP en visionneuse plein écran ;
+- ajout d’un bouton de fermeture propre à chaque fiche T00 à T10 ;
+- aucune duplication des images dans le flux de la page.
+
 ## 5.4.4
 
 - réécriture des onze fiches papier T00 à T10 à partir du corpus publié de l’Atelier LPLDF ;

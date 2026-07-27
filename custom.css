@@ -463,12 +463,69 @@ footer{border-top:4px solid var(--lpldf-gold)}
 
 /* BLOCS ÉDITORIAUX SOUS LES FICHES PRODUIT */
 .lpldf-product-extra{
-  margin:0 calc(50% - 50vw);
+  width:100%;
+  margin:0;
   font-family:Outfit,ui-sans-serif,system-ui,sans-serif;
   color:var(--lpldf-text);
   background:#fff;
 }
 .lpldf-product-extra *{box-sizing:border-box}
+main.mx-auto.max-w-7xl.px-6.py-10 .prose.max-w-full:has(.lpldf-product-extra){
+  width:100%;
+  max-width:none!important;
+}
+main.mx-auto.max-w-7xl.px-6.py-10 .prose.max-w-full:has(.lpldf-product-extra)>.my-5{
+  width:100%;
+  margin-inline:0!important;
+}
+.lpldf-native-gallery-close{display:none!important}
+
+/* La sélection native ?picture=… devient une visionneuse plein écran.
+   Aucune image supplémentaire n’est injectée dans le flux de la fiche. */
+main.mx-auto.max-w-7xl.px-6.py-10:has(.lpldf-product-extra):has(a[href^="?picture"] img.ring-2) .aspect-video{
+  position:fixed!important;
+  z-index:9998!important;
+  inset:0!important;
+  display:grid!important;
+  place-items:center!important;
+  width:100vw!important;
+  height:100dvh!important;
+  min-height:100dvh!important;
+  padding:clamp(14px,4vw,54px)!important;
+  overflow:hidden!important;
+  background:rgba(9,24,34,.94)!important;
+  backdrop-filter:blur(10px);
+}
+main.mx-auto.max-w-7xl.px-6.py-10:has(.lpldf-product-extra):has(a[href^="?picture"] img.ring-2) .aspect-video>img{
+  display:block!important;
+  width:auto!important;
+  max-width:min(1180px,94vw)!important;
+  height:auto!important;
+  max-height:90dvh!important;
+  object-fit:contain!important;
+  transform:none!important;
+  border-radius:18px!important;
+  background:var(--lpldf-cream);
+  box-shadow:0 35px 90px rgba(0,0,0,.48);
+}
+main.mx-auto.max-w-7xl.px-6.py-10:has(.lpldf-product-extra):has(a[href^="?picture"] img.ring-2) .lpldf-native-gallery-close{
+  position:fixed!important;
+  z-index:10001!important;
+  top:max(16px,env(safe-area-inset-top))!important;
+  right:max(16px,env(safe-area-inset-right))!important;
+  display:grid!important;
+  place-items:center!important;
+  width:48px!important;
+  height:48px!important;
+  border:1px solid rgba(255,255,255,.28)!important;
+  border-radius:50%!important;
+  background:#fff!important;
+  color:var(--lpldf-ink)!important;
+  font:700 1.8rem/1 Arial,sans-serif!important;
+  text-decoration:none!important;
+  box-shadow:0 12px 34px rgba(0,0,0,.32)!important;
+}
+html:has(main.mx-auto.max-w-7xl.px-6.py-10 .lpldf-product-extra):has(main.mx-auto.max-w-7xl.px-6.py-10 a[href^="?picture"] img.ring-2){overflow:hidden}
 .lpldf-product-extra__intro{
   padding:clamp(58px,8vw,100px) 0;
   background:
@@ -631,6 +688,8 @@ main.mx-auto.max-w-7xl.px-6.py-10 h2.text-\[22px\]+div{
   .lpldf-product-extra__questions ol{grid-template-columns:1fr}
 }
 @media(max-width:620px){
+  main.mx-auto.max-w-7xl.px-6.py-10{width:100%!important;max-width:100%!important;padding-inline:14px!important}
+  main.mx-auto.max-w-7xl.px-6.py-10 .prose.max-w-full:has(.lpldf-product-extra){width:100%!important;max-width:100%!important}
   .lpldf-product-extra__facts{grid-template-columns:1fr}
   .lpldf-product-extra__intro,.lpldf-product-extra__body{padding-block:54px}
   .lpldf-product-extra__questions{padding:24px}
