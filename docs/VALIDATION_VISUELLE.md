@@ -13,6 +13,11 @@
   d’ajout au panier be-BOP ;
 - chaque carte permet aussi d’ouvrir sa fiche produit ;
 - le Pack Liberté et responsabilité affiche bien son propre visuel ;
+- les seize bulles de guides de la page Univers ouvrent chacune la bonne fiche ;
+- les portraits transparents sont cadrés en entier et ne s’affichent jamais à la
+  suite dans la page ;
+- chaque fiche de guide peut défiler indépendamment et se ferme par la croix ou
+  par un clic sur l’arrière-plan ;
 - le footer présente les liens essentiels.
 
 ## Téléphone
@@ -24,6 +29,8 @@
 - les doubles pages restent lisibles au zoom ;
 - les grilles passent sur une colonne ;
 - les cartes Collection conservent le prix en sats et le bouton panier ;
+- les fiches de guides tiennent dans la largeur de l’écran, leur texte défile et
+  leur bouton de fermeture reste accessible ;
 - la fiche produit ne conserve aucun panneau `sticky`.
 
 ## Accessibilité

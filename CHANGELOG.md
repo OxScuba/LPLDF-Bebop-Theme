@@ -2,6 +2,16 @@
 
 Ce fichier conserve uniquement les changements durables du thème et des contenus de la boutique.
 
+## 5.7
+
+- transformation des seize noms de guides en bulles interactives ;
+- création de seize fiches illustrées : parcours, œuvres, concepts et rôle dans la saga ;
+- correspondance canonique des guides avec les Tomes 00 à 42 ;
+- ajout des quinze nouveaux portraits transparents au registre des images ;
+- ajout d’une fiche dédiée à Scuba Wizard comme auteur, illustrateur et passeur ;
+- affichage des fiches dans une visionneuse fermée par défaut, adaptée au mobile ;
+- ajout de validations empêchant la perte d’une bulle, d’une fiche ou d’un portrait.
+
 ## 5.6.1
 
 - correction des sélecteurs selon la structure DOM réellement générée par be-BOP ;

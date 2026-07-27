@@ -133,6 +133,8 @@ Pour le détail, consulter :
 - [maintenance du dépôt](docs/MAINTENANCE.md) ;
 - [architecture des contenus](docs/ARCHITECTURE.md) ;
 - [installation de la Collection marchande](docs/INSTALLER_COLLECTION_V5.6.md) ;
+- [installation des guides interactifs de l’Univers](docs/INSTALLER_GUIDES_UNIVERS_V5.7.md) ;
+- [cartographie éditoriale des guides](donnees/GUIDES_DE_LA_SAGA.md) ;
 - [configuration du thème natif](docs/THEME_NATIF_BEBOP.md) ;
 - [plan des CMS](docs/PLAN_CMS.md).
 
@@ -148,6 +150,7 @@ Le script de validation contrôle notamment :
 - les 11 fiches papier et leurs ISBN ;
 - les 11 blocs éditoriaux après produit ;
 - les 2 blocs éditoriaux après pack ;
+- les 16 bulles, fiches et portraits des guides de la page Univers ;
 - l’équilibre syntaxique du CSS.
 
 ```bash

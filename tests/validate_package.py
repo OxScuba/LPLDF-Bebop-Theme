@@ -87,6 +87,57 @@ def main():
     if "lpldf-native-collection-marker" not in collection:
         fail("La_Collection.html: marqueur du catalogue natif absent", failures)
 
+    universe = (ROOT / "cms" / "Univers.html").read_text(encoding="utf-8")
+    guide_links = re.findall(r'href="#(lpldf-guide-[^"]+)"', universe)
+    guide_ids = re.findall(r'id="(lpldf-guide-[^"]+)"', universe)
+    if len(guide_links) != 16:
+        fail(
+            f"Univers.html: 16 bulles de guides attendues, {len(guide_links)} trouvée(s)",
+            failures,
+        )
+    if len(guide_ids) != 16:
+        fail(
+            f"Univers.html: 16 fiches de guides attendues, {len(guide_ids)} trouvée(s)",
+            failures,
+        )
+    if set(guide_links) != set(guide_ids):
+        fail("Univers.html: une bulle de guide ne cible pas sa fiche", failures)
+    if universe.count("Dans la saga") != 16:
+        fail("Univers.html: chaque guide doit comporter une section « Dans la saga »", failures)
+    required_guide_images = {
+        "lpldf-fred-transparent-png-0-4pnzMK",
+        "lpldf-friedman-transparent-png-0-v3zMSm",
+        "lpldf-hayek-transparent-png-0-DhFWzM",
+        "lpldf-mises-transparent-png-0-pajeKd",
+        "lpldf-menger-transparent-png-0-oQtUNK",
+        "lpldf-salamanque-transparent-png-0-u3VrUK",
+        "lpldf-daquin-transparent-png-0-YsKfUh",
+        "lpldf-satoshi-transparent-png-0-jmM4Gu",
+        "lpldf-hoppe-transparent-png-0-jRk1oA",
+        "lpldf-rothbard-transparent-png-0-3fVjNT",
+        "lpldf-tocqueville-transparent-png-0-HvDQMA",
+        "lpldf-constant-transparent-png-0-zmu1CM",
+        "lpldf-say-transparent-png-0-nXGlhq",
+        "lpldf-turgot-transparent-png-0-8tKafe",
+        "lpldf-locke-transparent-png-0-JBdSoL",
+        "lpldf-scuba-transparent-png-0-5Luhei",
+    }
+    missing_guide_images = sorted(required_guide_images - set(re.findall(
+        r"/picture/raw/([^/]+)/format/",
+        universe,
+    )))
+    if missing_guide_images:
+        fail(
+            "Univers.html: image(s) de guide absente(s) " + ", ".join(missing_guide_images),
+            failures,
+        )
+
+    image_registry = (ROOT / "donnees" / "REGISTRE_IMAGES_BEBOP.csv").read_text(
+        encoding="utf-8"
+    )
+    if sum(line.startswith("guide,") for line in image_registry.splitlines()) != 15:
+        fail("REGISTRE_IMAGES_BEBOP.csv: 15 portraits de guides attendus", failures)
+
     css = (ROOT / "custom.css").read_text(encoding="utf-8")
     if css.count("{") != css.count("}"):
         fail("custom.css: accolades non équilibrées", failures)
@@ -102,6 +153,8 @@ def main():
         fail("custom.css: présentation du catalogue natif absente", failures)
     if ":has(> .my-5 > .lpldf-native-collection-marker)" not in css:
         fail("custom.css: sélecteur de la structure réelle be-BOP absent", failures)
+    if ".lpldf-guide-lightbox" not in css or ".lpldf-guide-list a" not in css:
+        fail("custom.css: présentation interactive des guides absente", failures)
 
     gallery_script = ROOT / "product-gallery.js"
     if not gallery_script.exists():
@@ -193,6 +246,7 @@ def main():
     print(f"- {len(product_files)} fiches papier et {len(set(isbns))} ISBN uniques")
     print(f"- {len(product_cms_files)} blocs CMS après produit")
     print(f"- {len(pack_cms_files)} blocs CMS après pack")
+    print(f"- {len(guide_ids)} fiches de guides reliées à leurs bulles")
     print("- CSS équilibré, badge de test absent")
     print("- Aucun placeholder d’image restant hors juridique")
     return 0
