@@ -2129,3 +2129,62 @@ main.mx-auto.max-w-7xl:has(input[name="shipping.firstName"])>div.w-full>div.w-fu
   }
 }
 
+
+/* ==========================================================================
+   BANNIERES 16:9 — affichage intégral sur téléphone en orientation portrait
+   L'illustration reste superposée au texte sur ordinateur et en paysage.
+   ========================================================================== */
+@media(max-width:760px) and (orientation:portrait){
+  .lpldf-hero{
+    display:block!important;
+    min-height:0!important;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 82% 0,rgba(216,168,62,.12),transparent 18rem),
+      var(--lpldf-ink)!important;
+  }
+  .lpldf-hero__image{
+    position:relative!important;
+    inset:auto!important;
+    z-index:0!important;
+    display:block;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:43/24;
+    object-fit:contain!important;
+    object-position:center center!important;
+    background:var(--lpldf-ink);
+  }
+  .lpldf-hero__veil{
+    inset:0 0 auto!important;
+    z-index:1!important;
+    width:100%;
+    height:auto!important;
+    aspect-ratio:43/24;
+    background:linear-gradient(180deg,transparent 68%,rgba(15,39,54,.18))!important;
+    pointer-events:none;
+  }
+  .lpldf-hero:after{
+    display:none!important;
+  }
+  .lpldf-hero__content{
+    position:relative;
+    z-index:2;
+    padding-block:44px 58px!important;
+    animation:lpldf-rise .65s .08s ease both;
+  }
+  .lpldf-hero__content h1{
+    max-width:100%;
+    margin-bottom:20px;
+    font-size:clamp(2.55rem,12vw,4rem)!important;
+    line-height:1.02!important;
+    overflow-wrap:break-word;
+  }
+  .lpldf-hero__lead{
+    max-width:100%;
+    margin-bottom:28px;
+    font-size:clamp(1.05rem,5.1vw,1.3rem)!important;
+    line-height:1.55!important;
+  }
+}
+
